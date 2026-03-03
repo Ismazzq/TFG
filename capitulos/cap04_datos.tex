@@ -1,0 +1,236 @@
+% ============================================================
+%  CAPÍTULO 4: DATOS Y DESCRIPCIÓN EMPÍRICA
+% ============================================================
+\chapter{Datos y descripción empírica}
+\label{cap:datos}
+
+% ------------------------------------------------------------
+\section{Introducción}
+% ------------------------------------------------------------
+
+El análisis empírico de este trabajo descansa sobre un panel de datos de
+elaboración propia, construido a partir de la compilación y homogeneización de
+tres fuentes estadísticas oficiales. El panel cubre las 17 comunidades autónomas
+españolas durante el período 2016--2024, con 153 filas teóricas (17 CCAA $	imes$
+9 años). Tras eliminar valores ausentes: (i) las variables de gasto están
+disponibles en 150 observaciones, (ii) el PIB per cápita en 136 y (iii) las
+listas de espera en 153 (todas las CCAA). Al construir retardos, la muestra
+efectiva se reduce a 118 observaciones (17 CCAA) para el modelo base con un
+retardo y a 101 (17 CCAA) cuando se utilizan dos retardos. Esta sección describe las fuentes utilizadas, el
+proceso de construcción del panel y las principales características de las
+variables empleadas.
+
+% ------------------------------------------------------------
+\section{Fuentes de datos}
+% ------------------------------------------------------------
+
+\subsection{Gasto en seguros sanitarios privados --- Encuesta de Presupuestos
+Familiares (INE)}
+
+La variable dependiente se obtiene de la \textbf{Encuesta de Presupuestos
+Familiares (EPF)} del Instituto Nacional de Estadística \parencite{INE_EPF}. La
+EPF recoge el gasto monetario de los hogares residentes en España, desagregado por
+comunidades autónomas y clasificado según la nomenclatura COICOP. La partida
+utilizada corresponde al epígrafe \textbf{06.3: Servicios hospitalarios y de
+seguros sanitarios privados}.
+
+Se utiliza el gasto por persona protegida (€/p.p.), expresado en términos
+\textbf{reales} mediante deflactación por el Índice de Precios al Consumo
+correspondiente a la rúbrica de seguros sanitarios (IPC seguros, base 2025 = 100):
+
+\begin{equation}
+  \text{GastoReal}_{it} =
+  \frac{\text{GastoNominal}_{it}}{\text{IPC\_Seguros}_{it}} \times 100
+  \label{eq:deflactacion}
+\end{equation}
+
+\subsection{Producto Interior Bruto per cápita --- Contabilidad Regional de España
+(INE)}
+
+El PIB per cápita a precios constantes (base 2015) se obtiene de la
+\textbf{Contabilidad Regional de España (CRE)} \parencite{INE_CRE}. El PIB real
+per cápita se construye dividiendo el PIB a precios constantes de cada CCAA entre
+su población de referencia a 1 de enero de cada año (Padrón Municipal de
+Habitantes). Esta variable actúa como \textit{proxy} de la \textbf{renta
+disponible agregada} de cada territorio.
+
+\subsection{Tiempos de espera en consulta de especialistas --- SISLE-SNS
+(Ministerio de Sanidad)}
+
+Los datos sobre tiempos de espera provienen del \textbf{Sistema de Información
+sobre Listas de Espera del SNS (SISLE-SNS)}, gestionado por el Ministerio de
+Sanidad \parencite{MinSanidad}. Este registro publica semestralmente los días
+medios de espera para consulta con especialista, desagregados por comunidad
+autónoma y especialidad médica.
+
+La variable utilizada es la \textbf{espera media en consulta de especialistas}
+(días), justificada teóricamente en el Capítulo~\ref{cap:teoria} mediante la Ley
+de Little. Para las estimaciones se utilizan los datos de cierre de año
+(diciembre) y se construyen los retardos temporales (lag 1 y lag 2) dentro de
+cada CCAA.
+
+\subsection{Variables demográficas y de control}
+
+El porcentaje de población mayor de 65 años se obtiene del \textbf{Padrón
+Continuo de Población} \parencite{INE_CRE}, que proporciona series anuales de
+estructura por edad para cada comunidad autónoma. La variable \textit{dummy} de
+pandemia COVID-19 toma valor 1 para el año 2020 en todas las CCAA.
+
+% ------------------------------------------------------------
+\section{Estadísticos descriptivos}
+% ------------------------------------------------------------
+
+La Tabla~\ref{tab:descriptivos} presenta los estadísticos descriptivos de las
+variables principales del análisis. El panel bruto contiene 153 observaciones
+(17 CCAA $\times$ 9 años), pero el número de observaciones válidas varía por
+variable (ver nota al pie) y los modelos econométricos usan subconjuntos entre
+118 y 101 observaciones tras construir retardos.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Estadísticos descriptivos del panel (17\,CCAA,\,2016--2024)}
+  \label{tab:descriptivos}
+  \begin{threeparttable}
+    \small
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{llS[table-format=6.2]S[table-format=5.2]
+                       S[table-format=5.2]S[table-format=5.2]S[table-format=6.2]}
+      \toprule
+      \textbf{Variable}
+        & \textbf{Descripción}
+        & {\textbf{Media}}
+        & {\textbf{D.\,Típica}}
+        & {\textbf{Mínimo}}
+        & {\textbf{Mediana}}
+        & {\textbf{Máximo}} \\
+      \midrule
+      \texttt{g\_seguros\_real}
+        & Gasto real seguros (€/p.p.)
+        & 237.70 & 162.06 & 57.26 & 176.83 & 779.37 \\
+      \texttt{log\_gasto\_real}
+        & Log del gasto real
+        & 5.277 & 0.606 & 4.048 & 5.175 & 6.658 \\
+      \texttt{pib\_pc}
+        & PIB per cápita real (€, p.c. 2015)
+        & 25996 & 5426 & 17239 & 24782 & 42639 \\
+      \texttt{log\_pib\_pc}
+        & Log del PIB per cápita
+        & 10.145 & 0.204 & 9.755 & 10.118 & 10.661 \\
+      \texttt{esp\_esp}
+        & Espera media especialista (días)
+        & 78.3 & 32.6 & 27 & 73 & 176 \\
+      \texttt{pob\_65\_pct}
+        & Población $\geq 65$ años (\%)
+        & 20.48 & 3.21 & 14.2 & 20.8 & 26.7 \\
+      \bottomrule
+    \end{tabular}}% fin resizebox
+    \begin{tablenotes}[flushleft]
+      \small
+      \item Fuentes: INE (EPF, CRE, Padrón); Ministerio de Sanidad (SISLE-SNS).
+        Gasto deflactado por IPC Seguros
+        (base 2025 = 100).
+      \item Observaciones válidas: 150 para gasto real en seguros y su logaritmo;
+        136 para PIB per cápita y su logaritmo; 153 para espera media en
+        especialistas; y 153 para porcentaje de población de 65 o más años.
+      \item Las variables binarias de pandemia (año 2020) y espera alta
+        (espera superior a 100 días) no se incluyen en esta tabla descriptiva.
+    \end{tablenotes}
+  \end{threeparttable}
+\end{table}
+
+\subsection{Heterogeneidad transversal del gasto}
+
+El gasto real en seguros privados presenta una \textbf{dispersión muy elevada}
+entre comunidades autónomas: la desviación típica (162~€/p.p.) representa el 68\%
+de la media (238~€/p.p.). El coeficiente de variación implica que las CCAA con
+mayor gasto privado (Madrid, País Vasco, Cataluña) gastan entre 4 y 6 veces más
+en seguros privados que las de menor propensión (Extremadura, Murcia, Canarias en
+algunos años). El rango observado ---de 57 a 779~€/p.p.--- subraya que la sanidad
+privada en España no es un fenómeno homogéneo sino profundamente territorial.
+
+\subsection{Capacidad explicativa del PIB per cápita}
+
+El PIB per cápita oscila entre 17.239~€ y 42.639~€, con una media de 25.996~€.
+La correlación simple entre $\log(\text{gasto\_real})$ y $\log(\text{pib\_pc})$
+alcanza $r = 0{,}625$ ($p < 0{,}001$, $N = 134$). Una regresión MCO simple entre
+ambas variables (134 observaciones válidas) produce una pendiente de 1{,}87 con
+$R^2 = 0{,}39$, sugiriendo que la renta per cápita explica por sí sola casi el
+40\% de la variación total en el gasto privado.
+
+La diferencia respecto a las 136 observaciones disponibles para
+	exttt{log\_pib\_pc} se debe a que el cruce bivariante exige datos completos
+simultáneos de $\log(\text{pib\_pc})$ y $\log(\text{gasto\_real})$: hay 2 casos
+con PIB observado pero gasto faltante, por lo que la muestra conjunta se reduce a
+$N = 134$.
+
+\subsection{Variabilidad de las listas de espera}
+
+Los tiempos de espera exhiben la mayor variabilidad relativa del panel: la
+desviación típica (32{,}6 días) representa el 42\% de la media (78{,}3 días). El
+rango va desde 27 hasta 176 días. El umbral de 100 días ---adoptado como criterio
+de espera excesiva en el modelo M3--- es superado en 33 observaciones (22\% del
+total). La baja correlación simple entre $\texttt{esp\_esp}$ y
+$\log(\text{gasto\_real})$ ($r = 0{,}031$) no debe interpretarse como ausencia de
+efecto, dado que el mecanismo es \textbf{diferido}.
+
+\subsection{Envejecimiento demográfico}
+
+El porcentaje de población mayor de 65 años oscila entre el 14{,}2\% y el 26{,}7\%,
+con una media del 20{,}5\%. La correlación negativa con el gasto en seguros
+privados ($r = -0{,}35$) sugiere que el envejecimiento no estimula el gasto
+privado, posiblemente porque los mayores dependen más intensamente del sistema
+público y tienen menor capacidad de pago para primas de seguro.
+
+% ------------------------------------------------------------
+\section{Evolución temporal y correlación entre variables clave}
+% ------------------------------------------------------------
+
+La Figura~\ref{fig:scatter} presenta el diagrama de dispersión entre el logaritmo
+del PIB per cápita y el logaritmo del gasto real en seguros privados para las
+observaciones del panel con datos completos en ambas variables ($N = 134$).
+Para este cruce concreto, el período efectivo es 2016--2023, ya que en 2024 no
+hay observaciones con PIB per cápita disponible.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.85\textwidth]{scatter_pib_gasto}
+  \caption[Gasto real en seguros privados y PIB per cápita]{%
+    Gasto real en seguros privados y PIB per cápita
+    (panel efectivo 2016--2023).}
+  \label{fig:scatter}
+  \begin{minipage}{0.85\textwidth}
+    \footnotesize\vspace{4pt}
+    \textit{Nota:} Cada punto representa una observación CCAA-año con datos
+    completos en $\log(\text{pib\_pc})$ y $\log(\text{gasto\_real})$
+    ($N = 134$). Línea de tendencia MCO: $\hat{\beta} = 1{,}87$,
+    $R^2 = 0{,}39$, $p < 0{,}001$. Fuentes: INE (EPF, CRE).
+  \end{minipage}
+\end{figure}
+
+La figura revela tres patrones relevantes. \textbf{Primero}, existe una relación
+positiva y estadísticamente significativa entre renta y gasto en seguros privados.
+\textbf{Segundo}, la nube de puntos muestra heterogeneidad transversal persistente
+que los efectos fijos capturan. \textbf{Tercero}, las observaciones más recientes
+tienden a situarse ligeramente por encima de los años anteriores, coherente con la
+tendencia creciente del gasto en seguros privados.
+
+% ------------------------------------------------------------
+\section{Restricciones de los datos y consideraciones para el análisis}
+% ------------------------------------------------------------
+
+El panel presenta las siguientes restricciones:
+
+\begin{itemize}
+  \item \textbf{Valores ausentes:} Tras eliminar valores perdidos, la muestra
+    efectiva es de 150 observaciones para las variables de gasto, 136 para el PIB
+    per cápita y 153 para listas de espera (las 17 CCAA disponen de datos de
+    espera para todo el período). Al construir retardos, las estimaciones
+    principales usan \textbf{118 observaciones} (modelo con un retardo, 17 CCAA)
+    y \textbf{101 observaciones} (modelo con dos retardos, 17 CCAA).
+  \item \textbf{Retardos y período efectivo:} La construcción de retardos de tiempo
+    de espera (lag 1 y lag 2) reduce el período de estimación a 2017--2024 para los
+    modelos con un retardo y a 2018--2024 para los modelos con dos retardos.
+  \item \textbf{Ámbito territorial:} El panel incluye las 17 comunidades
+    autónomas españolas (peninsulares e insulares). Ceuta y Melilla no forman
+    parte del ámbito del estudio al no ser comunidades autónomas.
+\end{itemize}

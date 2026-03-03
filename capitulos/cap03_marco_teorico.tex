@@ -1,0 +1,260 @@
+% ============================================================
+%  CAPÍTULO 3: MARCO TEÓRICO
+% ============================================================
+\chapter{Marco teórico}
+\label{cap:teoria}
+
+% ------------------------------------------------------------
+\section{Introducción}
+% ------------------------------------------------------------
+
+El presente capítulo desarrolla el marco teórico que sustenta el análisis empírico
+de la demanda de seguros sanitarios privados en España. Partimos de la premisa
+fundamental de que los hogares españoles operan en un sistema sanitario dual,
+donde la sanidad pública universal coexiste ---y compite--- con una oferta privada
+creciente. La decisión de contratar un seguro privado no obedece únicamente a
+consideraciones de renta, sino que incorpora una evaluación implícita de los
+costes de oportunidad asociados al uso del sistema público, especialmente aquellos
+derivados de los tiempos de espera.
+
+Estructuramos el capítulo en tres bloques analíticos. En primer lugar,
+formalizamos el modelo de decisión del hogar entre sanidad pública y privada,
+identificando las variables clave que determinan la asignación del gasto sanitario.
+En segundo lugar, introducimos la Ley de Little como fundamento teórico para la
+elección de los días de espera como \textit{proxy} de saturación del sistema
+público. Finalmente, desarrollamos el concepto de precio sombra del tiempo de
+espera.
+
+% ------------------------------------------------------------
+\section{El modelo de decisión del hogar: sanidad pública versus privada}
+% ------------------------------------------------------------
+
+\subsection{Planteamiento general}
+
+Consideremos un hogar representativo que maximiza su utilidad derivada del consumo
+de bienes y servicios, incluyendo servicios sanitarios. El hogar dispone de acceso
+gratuito en el punto de uso a la sanidad pública (financiada mediante impuestos),
+pero puede optar por complementar o sustituir dicho acceso mediante la contratación
+de un seguro sanitario privado.
+
+Siguiendo la tradición de la economía de la salud iniciada por
+\textcite{Grossman1972}, el individuo no demanda servicios sanitarios
+\textit{per se}, sino \textit{salud} como bien de inversión y consumo. Los
+servicios sanitarios son \textit{inputs} en la función de producción de salud del
+hogar. En este contexto, la elección entre sanidad pública y privada puede
+modelizarse como una decisión de asignación de recursos escasos ---tiempo y
+dinero--- para maximizar el stock de salud esperado.
+
+\subsection{Formalización del modelo}
+
+Sea $U = U(C, H)$ la función de utilidad del hogar, donde $C$ representa el
+consumo de bienes no sanitarios y $H$ el stock de salud. El hogar enfrenta la
+restricción presupuestaria:
+
+\begin{equation}
+  Y = C + p_s \cdot S
+  \label{eq:restriccion}
+\end{equation}
+
+donde $Y$ es la renta disponible, $p_s$ es la prima del seguro sanitario privado
+y $S \in \{0,1\}$ es una variable indicadora de contratación del seguro.
+
+La producción de salud depende de los servicios sanitarios consumidos:
+
+\begin{equation}
+  H = H(Q_{\text{pub}}, Q_{\text{priv}}, Z)
+  \label{eq:produccion_salud}
+\end{equation}
+
+donde $Q_{\text{pub}}$ son los servicios obtenidos del sistema público,
+$Q_{\text{priv}}$ los del sistema privado (accesibles solo si $S=1$), y $Z$ son
+otros determinantes de la salud (estilo de vida, genética, etc.).
+
+El elemento crucial de nuestro modelo es que el acceso a la sanidad pública,
+aunque gratuito en términos monetarios, conlleva un \textbf{coste temporal} no
+trivial:
+
+\begin{equation}
+  Q_{\text{pub}} = Q_{\text{pub}}(W)
+  \label{eq:demanda_publica}
+\end{equation}
+
+donde $W$ representa el tiempo de espera medio para acceder a los servicios
+públicos. A mayor $W$, menor es la cantidad efectiva de servicios que el hogar
+puede consumir en un período dado.
+
+\subsection{La decisión de contratación}
+
+El hogar contratará el seguro privado ($S=1$) si y solo si:
+
+\begin{equation}
+  U\!\left(Y - p_s,\, H(Q_{\text{pub}}(W), Q_{\text{priv}}, Z)\right)
+  > U\!\left(Y,\, H(Q_{\text{pub}}(W), 0, Z)\right)
+  \label{eq:decision}
+\end{equation}
+
+Aplicando una aproximación de Taylor de primer orden, la condición puede
+reescribirse como:
+
+\begin{equation}
+  \frac{\partial U}{\partial H} \cdot
+  \bigl[ H(Q_{\text{pub}}, Q_{\text{priv}}, Z)
+       - H(Q_{\text{pub}}, 0, Z) \bigr]
+  > \frac{\partial U}{\partial C} \cdot p_s
+  \label{eq:condicion_contratacion}
+\end{equation}
+
+Esta expresión revela que la decisión de contratar depende de: (i) la valoración
+marginal de la salud respecto al consumo, (ii) el incremento de salud esperado por
+acceder a la sanidad privada, y (iii) el precio del seguro. Crucialmente, cuando
+$W$ aumenta, $Q_{\text{pub}}(W)$ disminuye, lo que incrementa el diferencial de
+salud esperado y, por tanto, la probabilidad de contratar el seguro. Este es el
+\textbf{mecanismo de huida} que fundamenta nuestra hipótesis empírica.
+
+\subsection{Heterogeneidad según renta}
+
+El modelo predice que el efecto de los tiempos de espera sobre la demanda de
+seguros privados será heterogéneo según el nivel de renta del hogar. Para hogares
+de renta baja, la restricción presupuestaria es más estricta y
+$\partial U / \partial C$ es relativamente alto, lo que dificulta la contratación
+incluso ante tiempos de espera elevados. Para hogares de renta alta, el coste de
+oportunidad del tiempo es mayor, lo que amplifica el efecto de $W$ sobre la
+decisión.
+
+% ------------------------------------------------------------
+\section{La Ley de Little y los tiempos de espera como indicador de saturación}
+% ------------------------------------------------------------
+
+\subsection{Fundamentos de teoría de colas}
+
+La Ley de Little \parencite{Little1961} constituye uno de los resultados más
+robustos y generales de la teoría de colas. Establece una relación matemática
+fundamental entre tres magnitudes de cualquier sistema de espera en equilibrio
+estacionario:
+
+\begin{equation}
+  L = \lambda \cdot W
+  \label{eq:little}
+\end{equation}
+
+donde $L$ es el número medio de pacientes en el sistema, $\lambda$ es la tasa
+media de llegadas (demanda de servicios por unidad de tiempo) y $W$ es el tiempo
+medio de permanencia en el sistema. La elegancia de esta ley reside en su
+generalidad: es válida independientemente de la distribución de llegadas, el
+número de servidores o la disciplina de la cola.
+
+\subsection{Aplicación al sistema sanitario público}
+
+En el contexto del SNS español:
+
+\begin{itemize}
+  \item $L$: número de pacientes en lista de espera para una especialidad.
+  \item $\lambda$: tasa de derivaciones desde atención primaria.
+  \item $W$: días medios de espera para consulta con especialista.
+\end{itemize}
+
+\subsection{\texorpdfstring{¿Por qué \(W\) y no \(L\) como variable de saturación?}{Por que W y no L como variable de saturacion}}
+
+Argumentamos que $W$ (tiempo de espera) es la variable relevante para el hogar,
+no $L$ (número de pacientes en cola), por cuatro razones:
+
+\begin{enumerate}
+  \item El hogar no observa directamente $L$, pero sí experimenta $W$ cuando
+    solicita una cita con el especialista.
+  \item $W$ tiene una interpretación directa en términos de coste de oportunidad:
+    90 días de espera implican tres meses de dolor, incertidumbre o incapacidad
+    laboral.
+  \item $W$ es comparable entre CCAA con independencia de su tamaño poblacional.
+  \item Los individuos procesan la información en términos de tiempos más que de
+    volúmenes \parencite{Kahneman1979}.
+\end{enumerate}
+
+% ------------------------------------------------------------
+\section{El precio sombra del tiempo de espera}
+% ------------------------------------------------------------
+
+\subsection{Concepto de precio sombra}
+
+El \textbf{precio sombra} de un recurso es el coste de oportunidad implícito de
+su uso cuando dicho recurso no se intercambia en un mercado con precios explícitos.
+En el caso de la sanidad pública, acceder a los servicios requiere invertir tiempo,
+cuyo coste de oportunidad constituye el precio sombra del acceso.
+
+\subsection{Formalización}
+
+Sea $p_{\text{pub}}^{*}$ el precio sombra total de la sanidad pública para el
+hogar:
+
+\begin{equation}
+  p_{\text{pub}}^{*} = c_{\text{directo}} + w \cdot T
+  \label{eq:precio_sombra}
+\end{equation}
+
+donde $c_{\text{directo}}$ son los costes directos (copagos, transporte), $w$ es
+el coste de oportunidad del tiempo (salario/hora) y $T$ es el tiempo total
+invertido en acceder al servicio:
+
+\begin{equation}
+  T = W_{\text{cita}} + W_{\text{sala}} + T_{\text{desplazamiento}}
+      + T_{\text{consulta}}
+  \label{eq:tiempo_total}
+\end{equation}
+
+De estos componentes, $W_{\text{cita}}$ puede superar los 100 días en
+especialidades saturadas como traumatología, oftalmología o dermatología.
+
+\subsection{Efecto sobre el precio relativo}
+
+El precio relativo de la sanidad privada respecto a la pública es:
+
+\begin{equation}
+  \pi = \frac{p_s + p_{\text{priv}}^{*}}{p_{\text{pub}}^{*}}
+  \label{eq:precio_relativo}
+\end{equation}
+
+Cuando $W_{\text{cita}} \uparrow$, se tiene que $p_{\text{pub}}^{*} \uparrow$ y,
+por tanto, $\pi \downarrow$: la sanidad privada se vuelve relativamente más barata.
+Este abaratamiento relativo estimula la demanda de seguros privados.
+
+\subsection{Elasticidad de sustitución}
+
+La existencia de un precio sombra significativo implica que la sanidad pública y
+privada son \textbf{bienes sustitutivos}. Definiendo la elasticidad de sustitución
+como:
+
+\begin{equation}
+  \sigma = \frac{\partial \ln(Q_{\text{priv}}/Q_{\text{pub}})}
+                {\partial \ln(\pi)}
+  \label{eq:elasticidad_sustitucion}
+\end{equation}
+
+nuestra hipótesis empírica es que $\sigma < 0$: en términos operativos,
+$\partial \ln(\text{gasto\_privado}) / \partial W > 0$.
+
+% ------------------------------------------------------------
+\section{Síntesis y proposiciones teóricas}
+% ------------------------------------------------------------
+
+Del marco teórico desarrollado se derivan las siguientes proposiciones que guían
+el análisis empírico:
+
+\begin{description}
+  \item[\textbf{P1} (Efecto renta):] El gasto en seguros sanitarios privados es
+    una función creciente de la renta disponible del hogar, con elasticidad-renta
+    esperada mayor que la unidad.
+
+  \item[\textbf{P2} (Efecto precio sombra):] El gasto en seguros privados es una
+    función creciente de los tiempos de espera del sistema público.
+
+  \item[\textbf{P3} (Heterogeneidad):] El efecto de los tiempos de espera sobre
+    la demanda de seguros privados es mayor en las CCAA con mayor renta per cápita,
+    debido al mayor coste de oportunidad del tiempo.
+
+  \item[\textbf{P4} (Respuesta diferida):] El ajuste de la demanda de seguros
+    privados a cambios en los tiempos de espera no es instantáneo; el efecto
+    completo se materializa con un rezago de uno a dos años.
+\end{description}
+
+Estas proposiciones serán contrastadas empíricamente en el
+Capítulo~\ref{cap:resultados} mediante modelos de panel que explotan la variación
+temporal y transversal de las CCAA españolas en el período 2016--2024.

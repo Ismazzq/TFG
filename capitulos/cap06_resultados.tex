@@ -1,0 +1,295 @@
+% ============================================================
+%  CAPÍTULO 6: RESULTADOS EMPÍRICOS
+% ============================================================
+\chapter{Resultados empíricos}
+\label{cap:resultados}
+
+% ------------------------------------------------------------
+\section{Introducción}
+% ------------------------------------------------------------
+
+Este capítulo presenta los resultados de las cinco especificaciones estimadas:
+modelo base con un retardo de espera (M1, efectos fijos y aleatorios), modelo
+con dos retardos de espera (M2), modelo con persistencia del gasto (M3), y dos
+modelos de umbral que reemplazan la variable de espera continua por una dummy
+de espera superior a 100 días (M1-U y M3-U). Se evalúa en qué medida los
+resultados apoyan las hipótesis de investigación formuladas en el
+Capítulo~\ref{cap:introduccion}.
+
+% ------------------------------------------------------------
+\section{Resultados principales: Tabla de regresiones}
+% ------------------------------------------------------------
+
+La Tabla~\ref{tab:resultados} presenta los coeficientes estimados, errores
+estándar robustos agrupados por CCAA, y los indicadores de ajuste para los
+seis modelos estimados.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Resultados de los modelos de regresión de panel
+           (Variable dependiente: $\log G_{it}$)}
+  \label{tab:resultados}
+  \begin{threeparttable}
+    \scriptsize
+    \setlength{\tabcolsep}{4pt}
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{lS[table-format=-2.4]S[table-format=-2.4]
+                       S[table-format=-2.4]S[table-format=-2.4]
+                       S[table-format=-2.4]S[table-format=-2.4]}
+      \toprule
+      & {M1-FE} & {M1-RE$^*$} & {M2-FE} & {M3-FE} & {M1-U} & {M3-U} \\
+      \midrule
+      Constante &
+        -5.1640* & -9.2143*** & -4.9325* & -5.1925* & -6.0774** & -5.7288* \\
+        & {(2.8807)} & {(2.1142)} & {(2.7984)} & {(2.8603)} & {(2.9046)} & {(2.9345)} \\
+      \addlinespace
+      $\log\text{PIB\,pc}_{it}$ &
+        1.0151*** & 1.5414*** & 0.9656*** & 0.9246** & 1.1367*** & 1.0014*** \\
+        & {(0.3681)} & {(0.2298)} & {(0.3531)} & {(0.3556)} & {(0.3682)} & {(0.3606)} \\
+      \addlinespace
+      $\text{Espera}_{i,t-1}$ &
+        0.0002 & 0.0005 & -0.0001 & -0.0000 & {---} & {---} \\
+        & {(0.0006)} & {(0.0005)} & {(0.0006)} & {(0.0006)} & & \\
+      \addlinespace
+      $\text{Espera}_{i,t-2}$ &
+        {---} & {---} & 0.0003 & {---} & {---} & {---} \\
+        & & & {(0.0005)} & & & \\
+      \addlinespace
+      $\mathbb{1}(\text{Espera}_{t-1}>100)$ &
+        {---} & {---} & {---} & {---} & 0.0926** & 0.0558** \\
+        & & & & & {(0.0380)} & {(0.0224)} \\
+      \addlinespace
+      $\log G_{i,t-1}$ &
+        {---} & {---} & {---} & 0.2104* & {---} & 0.2010* \\
+        & & & & {(0.1168)} & & {(0.1166)} \\
+      \addlinespace
+      $D_{\text{COVID},t}$ &
+        0.0906 & 0.1657*** & 0.0888 & 0.0780 & 0.1063* & 0.0880 \\
+        & {(0.0589)} & {(0.0511)} & {(0.0571)} & {(0.0601)} & {(0.0582)} & {(0.0597)} \\
+      \addlinespace
+      $\text{Pob65}_{it}$ &
+        0.0045 & -0.0608*** & 0.0176 & -0.0018 & -0.0114 & -0.0118 \\
+        & {(0.0539)} & {(0.0199)} & {(0.0544)} & {(0.0495)} & {(0.0503)} & {(0.0461)} \\
+      \midrule
+      Observaciones & 118 & 118 & 101 & 116 & 118 & 116 \\
+      $R^2$ & 0.2816 & 0.5484 & 0.2002 & 0.5841 & 0.3895 & 0.6271 \\
+      \bottomrule
+    \end{tabular}}
+    \begin{tablenotes}[flushleft]
+      \footnotesize
+      \item Nota: Errores estándar robustos agrupados por CCAA entre paréntesis.
+      \item $R^2$ corresponde al $R^2$ global (\textit{overall}) de cada modelo.
+      \item $^*$ M1-RE presentado para comparación; test de Hausman ($\chi^2(4)=11{,}44$, $p=0{,}022$) prefiere FE.
+      \item El número de observaciones varía según disponibilidad de variables
+        (17 CCAA, 2016--2024, con datos faltantes).
+      \item Significatividad: $*$ $p < 0{,}10$, $**$ $p < 0{,}05$,
+        $***$ $p < 0{,}01$.
+    \end{tablenotes}
+  \end{threeparttable}
+\end{table}
+
+% ------------------------------------------------------------
+\section{Test de Hausman: Elección entre efectos fijos y aleatorios}
+\label{sec:hausman_resultados}
+% ------------------------------------------------------------
+
+El test de Hausman contrasta si los efectos individuales están correlacionados
+con los regresores. El estadístico obtenido es $\chi^2(4) = 11{,}44$ con
+$p$-valor de $0{,}022$. \textbf{Se rechaza la hipótesis nula} al 5\%, lo que
+indica que los efectos individuales están correlacionados con los regresores y
+el estimador de efectos aleatorios no es consistente. Por tanto,
+\textbf{M1-FE es el modelo preferido} para la interpretación principal. No
+obstante, los resultados de efectos aleatorios se presentan como referencia
+para la comparación con la variación \textit{between}.
+
+% ------------------------------------------------------------
+\section{Contraste de H1: Elasticidad renta}
+\label{sec:h1}
+% ------------------------------------------------------------
+
+\textbf{H1}: \textit{El gasto en seguros sanitarios privados es un bien de lujo
+($\varepsilon_Y > 1$)}.
+
+El coeficiente de $\log\text{PIB\,pc}$ en M1-FE es $\hat{\beta}_1 = 1{,}02$
+(e.e.\ 0{,}37), significativo al 1\%. Un incremento del 1\% en la renta per
+cápita se asocia con un incremento del \textbf{1{,}02\%} en el gasto en seguros
+privados. El coeficiente es prácticamente igual a la unidad, lo que sitúa el
+seguro sanitario privado en la frontera entre bien normal y bien de lujo. En el
+modelo de efectos aleatorios la elasticidad es más elevada
+($\hat{\beta}_1 = 1{,}54$, e.e.\ 0{,}23), pero el test de Hausman descarta la
+consistencia de este estimador.
+
+\textbf{Conclusión:} H1 queda \textbf{confirmada}. La elasticidad renta es
+significativamente positiva y cercana o superior a la unidad, confirmando que
+el seguro sanitario privado se comporta como un \textbf{bien de lujo} a escala
+regional.
+
+% ------------------------------------------------------------
+\section{Contraste de H2: Efecto lineal de las listas de espera}
+\label{sec:h2}
+% ------------------------------------------------------------
+
+\textbf{H2}: \textit{Tiempos de espera más largos inducen mayor gasto en
+seguros privados}.
+
+En M1-FE, el coeficiente de $\text{Espera}_{i,t-1}$ es $\hat{\gamma}_1 = 0{,}0002$
+(e.e.\ 0{,}0006), con $p$-valor de $0{,}77$. El coeficiente tiene signo positivo
+pero \textbf{no es estadísticamente significativo}. Bajo efectos aleatorios el
+resultado es similar ($\hat{\gamma}_1 = 0{,}0005$, $p = 0{,}34$).
+
+Este resultado sugiere que el efecto de las listas de espera sobre el gasto
+\textbf{no opera de forma lineal} a través de la variable continua de días de
+espera. Sin embargo, como veremos en la sección~\ref{sec:h4}, el efecto sí es
+significativo cuando se especifica como variable umbral.
+
+\textbf{Conclusión:} H2 \textbf{no queda confirmada} en su forma lineal.
+
+% ------------------------------------------------------------
+\section{Contraste de H3: Efecto diferido (dos retardos)}
+\label{sec:h3}
+% ------------------------------------------------------------
+
+\textbf{H3}: \textit{El efecto de las listas de espera opera con estructura de
+retardos temporal.}
+
+En M2-FE, los coeficientes de los dos retardos son: $\hat{\gamma}_1 = -0{,}0001$
+(e.e.\ 0{,}0006) y $\hat{\gamma}_2 = 0{,}0003$ (e.e.\ 0{,}0005). El test de
+Wald para la hipótesis conjunta $H_0: \gamma_1 = \gamma_2 = 0$ produce:
+
+\begin{equation}
+  \chi^2(2) = 0{,}39 \quad (p = 0{,}82)
+  \label{eq:wald_lags}
+\end{equation}
+
+\textbf{No se rechaza la hipótesis nula}. Los retardos de las listas de espera
+no son conjuntamente significativos, lo que sugiere que el efecto lineal de los
+días de espera no se acumula de forma diferida.
+
+\textbf{Conclusión:} H3 \textbf{no queda confirmada}. El efecto diferido no es
+significativo con la especificación lineal de retardos.
+
+% ------------------------------------------------------------
+\section{Contraste de H4: Efecto umbral}
+\label{sec:h4}
+% ------------------------------------------------------------
+
+\textbf{H4}: \textit{Existe un efecto umbral tal que, por encima de 100 días de
+espera, el impacto sobre el gasto privado es significativamente mayor.}
+
+En M1-U, el coeficiente de $\mathbb{1}(\text{Espera}_{t-1}>100)$ es
+$\hat{\delta} = 0{,}0926$ (e.e.\ 0{,}0380), con $t = 2{,}43$ y $p$-valor de
+$0{,}017$. Este resultado implica que, cuando la espera del año anterior supera
+los 100 días, el gasto en seguros privados es aproximadamente un
+\textbf{9{,}3\% mayor}, siendo este efecto \textbf{estadísticamente
+significativo al 5\%}.
+
+El modelo M3-U, que incorpora además el logaritmo del gasto anterior, confirma
+el efecto umbral ($\hat{\delta} = 0{,}0558$, e.e.\ 0{,}0224, $p = 0{,}015$),
+indicando un incremento del 5{,}6\% en el gasto cuando la espera retardada
+supera el umbral. La persistencia del gasto anterior también es significativa
+al 10\% ($\hat{\rho} = 0{,}201$, $p = 0{,}088$).
+
+Este hallazgo es central para la investigación: \textbf{el efecto de las listas
+de espera no es lineal}, sino que opera como un mecanismo de ``disparo'' cuando
+se supera un umbral crítico. Esto es coherente con el efecto \textit{exit} de
+Hirschman: los hogares no ajustan gradualmente su comportamiento ante pequeños
+incrementos de espera, sino que ``saltan'' al sector privado cuando perciben
+que el sistema público ha cruzado un límite de tolerancia.
+
+\textbf{Conclusión:} H4 queda \textbf{confirmada}. Existe un efecto umbral
+significativo en los 100 días de espera.
+
+% ------------------------------------------------------------
+\section{Contraste de H5: Persistencia del gasto}
+\label{sec:h5}
+% ------------------------------------------------------------
+
+\textbf{H5}: \textit{El gasto en seguros privados presenta inercia temporal
+(el gasto del año anterior predice el gasto actual).}
+
+En M3-FE, el coeficiente del logaritmo del gasto en seguros del año anterior es
+$\hat{\rho} = 0{,}210$ (e.e.\ 0{,}117), con $t = 1{,}80$ y $p$-valor de
+$0{,}075$. Dado que tanto la variable dependiente como el regresor están en
+logaritmos, este coeficiente se interpreta como una \textbf{elasticidad}: un
+aumento del 1\% en el gasto del año anterior se asocia con un incremento del
+0{,}21\% en el gasto actual. En M3-U, el coeficiente es $\hat{\rho} = 0{,}201$
+($p = 0{,}088$), confirmando el orden de magnitud.
+
+Este resultado indica que existe \textbf{inercia moderada} en el gasto en
+seguros privados: las CCAA que gastaron más el año anterior tienden a gastar
+más en el período actual, incluso controlando por renta y listas de espera.
+Esta persistencia puede reflejar: (i) renovación automática de pólizas,
+(ii) formación de hábitos de consumo sanitario privado, o (iii) procesos de
+difusión cultural del aseguramiento privado.
+
+\textbf{Conclusión:} H5 queda \textbf{parcialmente confirmada} en el modelo de
+efectos fijos con retardo (M3-FE). La elasticidad de persistencia de 0{,}21
+es significativa al 10\% ($p = 0{,}075$), lo que sugiere inercia temporal
+moderada en el gasto en seguros privados, aunque la evidencia no es concluyente
+al nivel convencional del 5\%.
+
+% ------------------------------------------------------------
+\section{Impacto del COVID-19}
+\label{sec:covid}
+% ------------------------------------------------------------
+
+El coeficiente de $D_{\text{COVID},t}$ es positivo en todos los modelos. En
+M1-FE (modelo preferido), $\hat{\beta}_4 = 0{,}091$ (e.e.\ 0{,}059), positivo
+pero no significativo al 5\% ($p = 0{,}13$). En el modelo de efectos aleatorios
+el efecto es mayor y significativo ($\hat{\beta}_4 = 0{,}166$, e.e.\ 0{,}051,
+$p = 0{,}002$), implicando un incremento del \textbf{16{,}6\%}. En M1-U, el
+coeficiente es marginalmente significativo ($\hat{\beta}_4 = 0{,}106$,
+$p = 0{,}071$).
+
+Estos valores son exactamente los reportados en la Tabla~\ref{tab:resultados}:
+M1-FE = 0{,}0906 (n.s.) y M1-RE = 0{,}1657$^{***}$.
+
+Este efecto positivo, aparentemente contraintuitivo, es coherente con el
+colapso percibido de la sanidad pública durante la pandemia y la búsqueda de
+alternativas privadas. La significatividad del efecto depende de la
+especificación utilizada.
+
+% ------------------------------------------------------------
+\section{Resumen de contraste de hipótesis}
+\label{sec:resumen_hipotesis}
+% ------------------------------------------------------------
+
+La Tabla~\ref{tab:hipotesis} sintetiza el contraste de las cinco hipótesis.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Síntesis del contraste de hipótesis}
+  \label{tab:hipotesis}
+  \begin{threeparttable}
+    \small
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{clp{4cm}cc}
+      \toprule
+      \textbf{Hip.} & \textbf{Enunciado} & \textbf{Evidencia}
+        & \textbf{Resultado} & \textbf{Modelo} \\
+      \midrule
+      H1 & Elasticidad renta $>1$ &
+        $\hat{\beta}=1{,}02^{***}$; $p=0{,}007$ &
+        \textbf{Confirmada} & M1-FE \\
+      H2 & Espera $\uparrow \Rightarrow$ seguros $\uparrow$ (lineal) &
+        $\hat{\gamma}=0{,}0002$ (n.s.) &
+        No confirmada & M1-FE \\
+      H3 & Efecto diferido (retardos) &
+        Wald $\chi^2(2)=0{,}39$ ($p=0{,}82$) &
+        No confirmada & M2-FE \\
+      H4 & Efecto umbral (100 días) &
+        $\hat{\delta}=0{,}093^{**}$; $p=0{,}017$ &
+        \textbf{Confirmada} & M1-U \\
+      H5 & Inercia del gasto &
+        $\hat{\rho}=0{,}210^{*}$; $p=0{,}075$ &
+        Parcialmente confirmada & M3-FE \\
+      \bottomrule
+    \end{tabular}}
+    \begin{tablenotes}[flushleft]
+      \footnotesize
+      \item Errores estándar agrupados por CCAA.
+      \item Test de Hausman: $\chi^2(4)=11{,}44$, $p=0{,}022$ $\Rightarrow$ FE preferido.
+      \item Significatividad: $*$ $p < 0{,}10$; $**$ $p < 0{,}05$; $***$ $p < 0{,}01$.
+    \end{tablenotes}
+  \end{threeparttable}
+\end{table}

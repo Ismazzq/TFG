@@ -1,0 +1,348 @@
+%=============================================================
+%  TRABAJO FIN DE GRADO
+%  Determinantes del gasto en seguros sanitarios privados
+%  en España: tiempos de espera, renta y comportamiento
+%  diferido (2016-2024)
+%
+%  Universidad de Murcia · Grado en Economía · 2025-2026
+%=============================================================
+
+% Para compilación rápida en Overleaf free, descomentar 'draft':
+% \documentclass[12pt, a4paper, twoside, draft]{report}
+\documentclass[12pt, a4paper, twoside]{report}
+
+%-------------------------------------------------------------
+% OPTIMIZACIÓN: Filtrar warnings de Overfull/Underfull
+%-------------------------------------------------------------
+\usepackage{silence}
+\WarningFilter{latex}{Overfull}
+\WarningFilter{latex}{Underfull}
+
+%-------------------------------------------------------------
+% CODIFICACIÓN E IDIOMA
+%-------------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish, es-nodecimaldot]{babel}
+
+%-------------------------------------------------------------
+% TIPOGRAFÍA
+%-------------------------------------------------------------
+\usepackage{lmodern}           % Latin Modern (mejora cm estándar)
+% \usepackage{microtype}       % DESACTIVADO: ralentiza compilación en Overleaf free
+
+%-------------------------------------------------------------
+% GEOMETRÍA DE PÁGINA
+%-------------------------------------------------------------
+\usepackage[
+  a4paper,
+  top=1.8cm,
+  bottom=1.8cm,
+  left=2.3cm,
+  right=1.8cm,
+  headheight=24pt
+]{geometry}
+\setlength{\headheight}{24pt}   % Evita warning de fancyhdr
+
+%-------------------------------------------------------------
+% INTERLINEADO
+%-------------------------------------------------------------
+\usepackage{setspace}
+\setstretch{1.2}               % Interlineado 1.2
+\setlength{\parskip}{1.5pt plus 1pt minus 1pt}  % Espacio entre párrafos reducido
+
+%-------------------------------------------------------------
+% ENCABEZADOS Y PIES DE PÁGINA
+%-------------------------------------------------------------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\small\thepage}
+\fancyhead[RE]{\small\leftmark}
+\fancyhead[LO]{\small\rightmark}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \fancyfoot[C]{\small\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
+%-------------------------------------------------------------
+% MATEMÁTICAS
+%-------------------------------------------------------------
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{bm}                % Negrita en modo matemático
+% Reducir espacio alrededor de ecuaciones (pero manteniendo líneas entre fórmulas)
+\setlength{\abovedisplayskip}{4pt plus 2pt minus 2pt}
+\setlength{\belowdisplayskip}{4pt plus 2pt minus 2pt}
+\setlength{\abovedisplayshortskip}{2pt plus 1pt minus 1pt}
+\setlength{\belowdisplayshortskip}{2pt plus 1pt minus 1pt}
+
+%-------------------------------------------------------------
+% TABLAS
+%-------------------------------------------------------------
+\usepackage{booktabs}          % Tablas con \toprule, \midrule, \bottomrule
+\usepackage{array}             % Columnas con tipos personalizados
+\usepackage{multirow}          % Celdas que abarcan varias filas
+\usepackage{longtable}         % Tablas de varias páginas
+\usepackage{threeparttable}    % Notas al pie de tablas
+\usepackage{siunitx}           % Alineación decimal en tablas
+\sisetup{
+  table-format        = 2.4,
+  table-number-alignment = right
+}
+% Reducir espacio en tablas
+\setlength{\aboverulesep}{0pt}
+\setlength{\belowrulesep}{0pt}
+\setlength{\extrarowheight}{1pt}
+
+%-------------------------------------------------------------
+% FIGURAS
+%-------------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\graphicspath{{./figuras/}}
+% Reducir espacio alrededor de figuras y tablas
+\setlength{\floatsep}{5pt plus 2pt minus 2pt}
+\setlength{\textfloatsep}{5pt plus 2pt minus 2pt}
+\setlength{\intextsep}{5pt plus 2pt minus 2pt}
+\captionsetup{font=small, skip=3pt}
+
+%-------------------------------------------------------------
+% COLOR Y RESALTADO
+%-------------------------------------------------------------
+\usepackage[dvipsnames]{xcolor}
+\definecolor{umublue}{RGB}{0, 50, 120}   % Azul corporativo UMU
+
+%-------------------------------------------------------------
+% HIPERVÍNCULOS
+%-------------------------------------------------------------
+\usepackage[
+  colorlinks   = true,
+  linkcolor    = black,
+  citecolor    = black,
+  urlcolor     = black,
+  pdfencoding  = auto
+]{hyperref}
+\hypersetup{
+  pdftitle     = {TFG - Determinantes del gasto en seguros sanitarios privados},
+  pdfauthor    = {Ismael Quesada García},
+  pdfsubject   = {Economía de la Salud},
+  pdfkeywords  = {listas-de-espera; seguros-privados; España; datos-de-panel}
+}
+
+%-------------------------------------------------------------
+% BIBLIOGRAFÍA (biblatex + biber)
+%-------------------------------------------------------------
+\usepackage[
+  backend    = biber,
+  style      = apa,
+  sortlocale = es_ES,
+  uniquename = false,
+  uniquelist = false
+]{biblatex}
+\addbibresource{referencias.bib}
+
+%-------------------------------------------------------------
+% LISTAS
+%-------------------------------------------------------------
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep, topsep=1pt, partopsep=0pt}
+\setlist[enumerate]{noitemsep, topsep=1pt, partopsep=0pt}
+\setlist[description]{noitemsep, topsep=1pt, partopsep=0pt}
+
+%-------------------------------------------------------------
+% OTROS PAQUETES ÚTILES
+%-------------------------------------------------------------
+\usepackage{placeins}          % \FloatBarrier
+\usepackage{csquotes}          % Comillas tipográficas (requerido por biblatex)
+% \usepackage{pdfpages}        % DESACTIVADO: no se usa
+% \usepackage{emptypage}       % DESACTIVADO: no se usa
+% \usepackage{afterpage}       % DESACTIVADO: no se usa
+
+%-------------------------------------------------------------
+% CONFIGURACIÓN DE CAPÍTULOS Y SECCIONES
+%-------------------------------------------------------------
+\usepackage{titlesec}
+% Reducir espacio en tabla de contenidos
+\usepackage{tocloft}
+\setlength{\cftbeforechapskip}{4pt}
+\setlength{\cftbeforesecskip}{1pt}
+\setlength{\cftbeforesubsecskip}{0pt}
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\color{black}}
+  {\chaptertitlename\ \thechapter}
+  {8pt}
+  {\Huge}
+\titlespacing*{\chapter}{0pt}{-18pt}{10pt}
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{black}}
+  {\thesection}
+  {1em}
+  {}
+\titlespacing*{\section}{0pt}{8pt plus 3pt minus 2pt}{4pt plus 2pt minus 2pt}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{black}}
+  {\thesubsection}
+  {1em}
+  {}
+\titlespacing*{\subsection}{0pt}{6pt plus 2pt minus 2pt}{2pt plus 1pt minus 1pt}
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries\color{black}}
+  {\thesubsubsection}
+  {1em}
+  {}
+\titlespacing*{\subsubsection}{0pt}{6pt plus 2pt minus 2pt}{2pt plus 2pt minus 2pt}
+
+%-------------------------------------------------------------
+% PORTADA PERSONALIZADA (según plantilla oficial UMU - REDIMENSIONADA)
+%-------------------------------------------------------------
+\newcommand{\portada}{%
+  \begin{titlepage}
+    \centering
+    
+    % Logo institucional único (UMU + Facultad) grande y arriba
+    \vspace*{-1cm}
+    \IfFileExists{figuras/logo_facultad.png.png}{%
+      \includegraphics[width=0.9\textwidth]{logo_facultad.png.png}
+    }{}
+    
+    \vspace{2.2cm}
+    
+    % MEMORIA DEL TRABAJO FIN DE GRADO (más discreto)
+    {\fontsize{34}{40}\selectfont\bfseries MEMORIA\par}
+    \vspace{0.2cm}
+    {\fontsize{34}{40}\selectfont\bfseries DEL TRABAJO FIN DE GRADO\par}
+    
+    \vspace{2cm}
+    
+    % Título del trabajo (Color negro)
+    {\fontsize{32}{38}\selectfont\bfseries\color{black}
+      Determinantes del gasto en seguros sanitarios privados
+      en España: tiempos de espera, renta y comportamiento
+      diferido (2016--2024)\par}
+    
+    \vspace{2.5cm}
+    
+    % Autor
+    {\fontsize{24}{29}\selectfont Ismael Quesada García\par}
+    
+    \vspace{2cm}
+    
+    % Información adicional
+    {\large\bfseries\color{black} Grado en Economía\par}
+    \vspace{0.5cm}
+    {\large\bfseries\color{black} Curso 2025--2026\par}
+    
+    \vfill
+    
+    % Información del tutor y área
+    {\small
+    \begin{tabular}{@{}l@{}}
+      \textbf{Tutor/a:} Fernando Ignacio Sánchez Martínez \\[2pt]
+      \textbf{Área:} Economía de las Políticas Sociales \\
+    \end{tabular}
+    }
+    
+  \end{titlepage}%
+}
+
+%=============================================================
+%  DOCUMENTO
+%=============================================================
+\begin{document}
+
+\portada
+
+%-------------------------------------------------------------
+% RESUMEN / ABSTRACT (según plantilla oficial UMU)
+%-------------------------------------------------------------
+\chapter*{RESUMEN}
+\addcontentsline{toc}{chapter}{Resumen}
+\markboth{Resumen}{Resumen}
+
+Este trabajo analiza los determinantes del gasto de los hogares españoles en seguros sanitarios privados durante el período 2016--2024, con especial atención al papel de los tiempos de espera del Sistema Nacional de Salud. A partir de un panel de datos de las 17 comunidades autónomas se estiman modelos de efectos fijos, efectos aleatorios y un modelo dinámico.
+
+Los principales hallazgos son: \textit{(i)} la elasticidad-renta del gasto en seguros privados es aproximadamente unitaria en el modelo de efectos fijos preferido ($\beta \approx 1{,}02$), confirmando el carácter de bien de lujo; \textit{(ii)} el efecto lineal y diferido de los tiempos de espera no resulta estadísticamente significativo (test de Wald $\chi^2(2) = 0{,}39$, $p = 0{,}82$); \textit{(iii)} sin embargo, existe un \textbf{efecto umbral significativo}: cuando la espera supera los 100 días, el gasto privado aumenta un 9{,}3\% ($p = 0{,}017$); \textit{(iv)} el gasto presenta inercia marginalmente significativa (coeficiente de persistencia $\rho = 0{,}21$). Se discuten las implicaciones para la equidad del sistema y las políticas de reducción de tiempos extremos.
+
+\smallskip
+\noindent\textbf{Palabras clave:} listas de espera, seguros sanitarios privados, datos de panel, precio sombra, SNS, España.
+
+%-------------------------------------------------------------
+% ÍNDICES
+%-------------------------------------------------------------
+\tableofcontents
+\listoftables
+\listoffigures
+
+%-------------------------------------------------------------
+% CAPÍTULOS
+%-------------------------------------------------------------
+\input{capitulos/cap01_introduccion}
+\input{capitulos/cap02_marco_institucional}
+\input{capitulos/cap03_marco_teorico}
+\input{capitulos/cap04_datos}
+\input{capitulos/cap05_metodologia}
+\input{capitulos/cap06_resultados}
+\input{capitulos/cap07_discusion}
+\input{capitulos/cap08_limitaciones}
+\input{capitulos/cap09_conclusiones}
+
+%-------------------------------------------------------------
+% BIBLIOGRAFÍA
+%-------------------------------------------------------------
+\printbibliography[heading=bibintoc, title={Bibliografía}]
+
+%-------------------------------------------------------------
+% SUMMARY EN INGLÉS (mínimo 1.000 palabras - según plantilla)
+%-------------------------------------------------------------
+\chapter*{SUMMARY}
+\addcontentsline{toc}{chapter}{Summary}
+\markboth{Summary}{Summary}
+
+This paper analyses the determinants of Spanish households' expenditure on private health insurance over the period 2016--2024, with particular attention to the role of waiting times in the National Health Service (Sistema Nacional de Salud, SNS). Drawing on a panel dataset covering the 17 autonomous communities (Comunidades Autónomas, CCAA), we estimate fixed effects, random effects, and dynamic models to explore how both income and public healthcare supply constraints influence demand for complementary private insurance.
+
+\section*{Research Context and Motivation}
+
+The Spanish National Health Service has faced a structural crisis whose most visible manifestation is the persistent and growing problem of waiting lists. By the end of 2023, more than 800,000 patients were waiting for surgical interventions, with average waiting times exceeding 150 days for specialist consultations in some autonomous communities. This situation is not merely cyclical: a sustained upward trend has been observed since 2016, interrupted only---and paradoxically---by the COVID-19 pandemic, which reduced waiting lists through the massive suspension of scheduled activity, only to see them surge to historic levels during the recovery period.
+
+The persistence and magnitude of the waiting list problem raises fundamental questions about the sustainability of the Spanish healthcare model and, more specifically, about the adaptive responses of households to the perceived deterioration of public service quality. In a system with universal coverage and free access at the point of use, what factors determine that a growing proportion of the population opts to contract complementary private health insurance? Do waiting times constitute an empirically measurable push factor? And, if so, how does this mechanism operate over time?
+
+\section*{Theoretical Framework: Shadow Price of Waiting Times}
+
+The theoretical starting point of this study is the recognition that public healthcare, although formally free, entails implicit costs for users. Waiting time constitutes the main such cost: weeks or months of diagnostic uncertainty, untreated pain, temporary work incapacity, or deterioration in quality of life. This temporal cost can be formalized through the economic concept of shadow price.
+
+The shadow price of waiting time represents the implicit monetary value that households attribute to the period between requesting a specialist appointment and actually obtaining it. For high-wage workers, each day of waiting carries a higher opportunity cost (foregone salary, lost productivity). For patients with progressive pathologies, each day without treatment represents additional deterioration of their health stock. When the shadow price of public healthcare increases---because waiting times lengthen---the relative price of private insurance decreases, stimulating its demand.
+
+This perspective connects directly with Grossman's (1972) tradition on the demand for health as human capital and with subsequent literature on choice between healthcare sectors. The specific contribution of this work consists in operationalizing the shadow price through days of waiting for specialist consultations and empirically testing its effect on Spanish households' expenditure on private insurance.
+
+\section*{Research Hypotheses}
+
+The central research question guiding this study is: What are the determinants of Spanish households' expenditure on private health insurance, and what role do public system waiting times play in this decision?
+
+Based on the theoretical framework, we formulate five operational hypotheses: (H1) Income effect---expenditure on private health insurance is an increasing function of disposable income, with elasticity exceeding unity (superior good); (H2) Shadow price effect---an increase in public system waiting times raises expenditure on private insurance by reducing their relative price; (H3) Lagged effect---households' response to changes in waiting times is not instantaneous but materializes with a lag of 1--2 years due to contractual inertia, waiting periods, and information search costs; (H4) Threshold effect---there exists a critical waiting time threshold (estimated at 100 days) beyond which households' response intensifies non-linearly; (H5) Persistence effect---private insurance expenditure shows temporal inertia, so past expenditure positively influences current expenditure due to policy renewal and consumption habits.
+
+\section*{Methodology and Data}
+
+We construct an autonomous community panel (17 CCAA, 2016--2024) combining information from the National Statistics Institute (INE) on insurance expenditure, GDP per capita, and demographics, with Ministry of Health data on waiting times. This allows analysis exploiting both cross-sectional (between) and temporal (within) variation in variables.
+
+We estimate econometric models capturing the lagged effect of waiting times on private expenditure through temporal lags whose joint significance is verified through Wald tests. We also explore possible threshold non-linearity: do households react more intensely when waiting times exceed a psychologically significant critical point?
+
+\section*{Main Results}
+
+Results confirm income as the dominant determinant (elasticity $\approx 1.02$ in the preferred fixed-effects model, superior good). The linear and lagged effect of waiting times is not statistically significant (Wald test $\chi^2(2) = 0.39$, $p = 0.82$). However, there is a \textbf{significant threshold effect}: when waiting time exceeds 100 days, private expenditure increases by 9.3\% ($p = 0.017$). Additionally, expenditure shows marginally significant persistence ($\rho = 0.21$), reflecting policy renewal and habit formation.
+
+There is indicative evidence of a threshold effect around 100 waiting days, suggesting that households' sensitivity increases non-linearly beyond this point. This finding has important implications for healthcare policy design: reducing extreme waiting times (above 100 days) may have disproportionate effects on equity, as it would reduce incentives for higher-income households to exit the public system.
+
+\section*{Policy Implications and Conclusions}
+
+These findings have direct implications for healthcare policy. First, they confirm that waiting lists are not merely a technical-organizational problem but a structural factor affecting the public-private healthcare mix. Second, the lagged nature of the effect suggests that hasty short-term reforms may not immediately reverse the trend toward private insurance. Third, the existence of a threshold suggests prioritizing reduction of extreme waiting times rather than uniform improvements across all regions.
+
+The main limitation of this study is our inability to control for unobserved individual heterogeneity due to data availability constraints at the aggregate level. Future extensions could incorporate microdata from household budget surveys to model the individual decision to contract private insurance, distinguishing between extensive margin (whether to contract) and intensive margin (how much to spend).
+
+\medskip
+\noindent\textbf{Keywords:} waiting lists, private health insurance, panel data, shadow price, cointegration, Spain.
+
+\end{document}

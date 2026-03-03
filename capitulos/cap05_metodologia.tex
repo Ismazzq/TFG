@@ -1,0 +1,260 @@
+% ============================================================
+%  CAPÍTULO 5: METODOLOGÍA ECONOMÉTRICA
+% ============================================================
+\chapter{Metodología econométrica}
+\label{cap:metodologia}
+
+% ------------------------------------------------------------
+\section{Introducción}
+% ------------------------------------------------------------
+
+Este capítulo detalla la estrategia de identificación y los procedimientos
+econométricos empleados. El diseño metodológico está gobernado por dos requisitos
+derivados de la teoría (Capítulo~\ref{cap:teoria}): (1) identificar el efecto
+causal de la renta sobre el gasto en seguros privados controlando la heterogeneidad
+territorial fija, y (2) modelizar el efecto de los tiempos de espera con la
+estructura de retardos predicha por la Ley de Little.
+
+% ------------------------------------------------------------
+\section{Modelo econométrico base de datos de panel}
+% ------------------------------------------------------------
+
+\subsection{Especificación general}
+
+La ecuación econométrica general del estudio es:
+
+\begin{equation}
+  \log G_{it} = \alpha_{i} + \beta_1 \log\text{PIB\,pc}_{it}
+    + \beta_2 \, \text{Espera}_{i,t-1}
+    + \beta_3 \, \text{Pob65}_{it}
+    + \beta_4 \, D_{\text{COVID},t}
+    + \varepsilon_{it}
+  \label{eq:modelo_base}
+\end{equation}
+
+donde:
+\begin{description}
+  \item[$\log G_{it}$] Logaritmo del gasto real en seguros sanitarios privados
+    (€/p.p.) de la CCAA $i$ en el año $t$.
+  \item[$\alpha_{i}$] Efecto individual de la CCAA $i$ (fijo o aleatorio).
+  \item[$\log\text{PIB\,pc}_{it}$] Logaritmo del PIB per cápita real de la
+    CCAA $i$ en $t$.
+  \item[$\text{Espera}_{i,t-1}$] Tiempo de espera medio en consulta de
+    especialistas (días) con retardo de un período.
+  \item[$\text{Pob65}_{it}$] Porcentaje de población mayor de 65 años.
+  \item[$D_{\text{COVID},t}$] Variable indicadora para el año 2020.
+  \item[$\varepsilon_{it}$] Término de error idiosincrásico, $\mathbb{E}[\varepsilon_{it}|x_{it},\alpha_i]=0$.
+\end{description}
+
+La especificación en doble logaritmo para las variables continuas (gasto, PIB)
+permite interpretar $\beta_1$ directamente como \textbf{elasticidad renta} del
+gasto en seguros privados, la magnitud central del análisis.
+
+\subsection{Efectos fijos vs.\ efectos aleatorios}
+
+El panel puede estimarse con efectos fijos (FE) o efectos aleatorios (RE). La
+distinción es relevante porque, bajo efectos fijos, $\alpha_i$ puede estar
+arbitrariamente correlacionado con los regresores, mientras que bajo efectos
+aleatorios se requiere la condición de ortogonalidad $\mathbb{E}[\alpha_i | x_{it}] = 0$.
+
+El estimador \textbf{within} de efectos fijos elimina $\alpha_i$ sustrayendo la
+media temporal de cada variable:
+
+\begin{equation}
+  (\log G_{it} - \overline{\log G}_i) =
+  \beta_1 (\log\text{PIB\,pc}_{it} - \overline{\log\text{PIB\,pc}}_i)
+  + \ldots + (\varepsilon_{it} - \bar{\varepsilon}_i)
+  \label{eq:within}
+\end{equation}
+
+El estimador \textbf{GLS} de efectos aleatorios explota la variación tanto
+within como between, siendo más eficiente si el supuesto de ortogonalidad se
+cumple. El contraste de Hausman (\S\ref{sec:hausman}) determina cuál es el
+estimador consistente.
+
+% ------------------------------------------------------------
+\section{Contrastes de especificación}
+\label{sec:especificacion}
+% ------------------------------------------------------------
+
+\subsection{Contraste de raíz unitaria en panel}
+
+Antes de estimar la ecuación~\eqref{eq:modelo_base}, se comprueban las
+propiedades de integración de las variables. Se utiliza el contraste de
+Im-Pesaran-Shin (IPS), que controla la heterogeneidad de los coeficientes
+autorregresivos entre unidades \parencite{Im2003}:
+
+\begin{equation}
+  \bar{W}_{\text{IPS}} =
+  \frac{\sqrt{N}\bigl(\bar{t} - \mathbb{E}[\bar{t}]\bigr)}
+       {\sqrt{\text{Var}[\bar{t}]}}
+  \xrightarrow{d} \mathcal{N}(0,1)
+  \label{eq:ips}
+\end{equation}
+
+donde $\bar{t}$ es la media de los estadísticos ADF individuales. Los resultados
+del contraste IPS indican que $\log G_{it}$ y $\log\text{PIB\,pc}_{it}$ son
+\textbf{integrados de orden~1} ($I(1)$), mientras que $\text{Espera}_{it}$ y
+$\text{Pob65}_{it}$ son estacionarios ($I(0)$).
+
+\subsection{Contrastes de cointegración}
+
+La presencia de variables $I(1)$ exige verificar si existe una \textbf{relación
+de cointegración} entre $\log G_{it}$ y $\log\text{PIB\,pc}_{it}$, lo que
+garantizaría que la estimación MCO-panel no sea espuria. Se aplican los
+contrastes de \textcite{Pedroni1999, Pedroni2004} y de \textcite{Kao1999}:
+
+\begin{itemize}
+  \item \textbf{Pedroni ADF}: $t = -4{,}872$ ($p < 0{,}001$) $\Rightarrow$
+    \textit{Se rechaza hipótesis nula de no cointegración}.
+  \item \textbf{Kao ADF}: $t = -3{,}156$ ($p = 0{,}001$) $\Rightarrow$
+    \textit{Se rechaza hipótesis nula de no cointegración}.
+\end{itemize}
+
+Ambos contrastes confirman la existencia de una \textbf{relación de
+cointegración} entre gasto privado y PIB per cápita. La ecuación
+\eqref{eq:modelo_base} captura, por tanto, una relación de largo plazo.
+
+\subsection{Contraste de Hausman}
+\label{sec:hausman}
+
+El contraste de Hausman \parencite{Hausman1978} compara los estimadores FE y RE:
+
+\begin{equation}
+  H = (\hat{\beta}_{\text{FE}} - \hat{\beta}_{\text{RE}})^{\top}
+      \bigl[\widehat{\text{Var}}(\hat{\beta}_{\text{FE}}) -
+             \widehat{\text{Var}}(\hat{\beta}_{\text{RE}})\bigr]^{-1}
+      (\hat{\beta}_{\text{FE}} - \hat{\beta}_{\text{RE}})
+  \xrightarrow{d} \chi^2(k)
+  \label{eq:hausman}
+\end{equation}
+
+Los resultados obtenidos son $\chi^2(4) = 11{,}44$ ($p = 0{,}022$), lo que
+\textbf{permite rechazar} la hipótesis nula de ortogonalidad entre efectos
+individuales y regresores al 5\%. Por tanto, el estimador FE es \textbf{consistente},
+mientras que el estimador RE no lo es. Los resultados RE se presentan en
+paralelo (Modelo M1-RE) para verificar la sensibilidad de los coeficientes a
+la variación \textit{between}, pero la interpretación principal se basa en
+efectos fijos.
+
+% ------------------------------------------------------------
+\section{Extensiones del modelo}
+\label{sec:extensiones}
+% ------------------------------------------------------------
+
+\subsection{Modelo con retardos distribuidos (M2)}
+
+Para contrastar si el efecto de las listas de espera se acumula con el tiempo,
+se estima un modelo con dos retardos:
+
+\begin{equation}
+  \log G_{it} = \alpha_i + \beta_1 \log\text{PIB\,pc}_{it}
+    + \gamma_1 \,\text{Espera}_{i,t-1}
+    + \gamma_2 \,\text{Espera}_{i,t-2}
+    + \beta_3 \,\text{Pob65}_{it}
+    + \beta_4 \,D_{\text{COVID},t}
+    + \varepsilon_{it}
+  \label{eq:mod_lags}
+\end{equation}
+
+Se contrasta la hipótesis conjunta $H_0$: $\gamma_1 = \gamma_2 = 0$ mediante un
+test de Wald.
+
+\subsection{Modelo con persistencia del gasto (M3)}
+
+Para capturar la inercia en las decisiones de gasto en seguros, se incluye el
+gasto del año anterior como regresor:
+
+\begin{equation}
+  \log G_{it} = \alpha_i + \beta_1 \log\text{PIB\,pc}_{it}
+    + \gamma_1 \,\text{Espera}_{i,t-1}
+    + \rho \, \log G_{i,t-1}
+    + \beta_3 \,\text{Pob65}_{it}
+    + \beta_4 \,D_{\text{COVID},t}
+    + \varepsilon_{it}
+  \label{eq:mod_persist}
+\end{equation}
+
+donde $\log G_{i,t-1}$ es el logaritmo del gasto real en seguros del año
+anterior. Al estar ambas variables en logaritmos, el coeficiente $\rho$ se
+interpreta como una elasticidad de persistencia: un incremento del 1\% en el
+gasto del año anterior se asocia con un aumento del $\rho$\% en el gasto actual.
+
+\subsection{Modelos umbral (M1-U y M3-U)}
+
+Para capturar efectos no lineales, se estiman modelos que reemplazan la variable
+continua de espera por una dummy de espera elevada retardada ($\tau = 100$ días):
+
+\begin{equation}
+  \log G_{it} = \alpha_i + \beta_1 \log\text{PIB\,pc}_{it}
+    + \delta \,\mathbb{1}(\text{Espera}_{i,t-1} > 100)
+    + \beta_3 \,\text{Pob65}_{it}
+    + \beta_4 \,D_{\text{COVID},t}
+    + \varepsilon_{it}
+  \label{eq:mod_umbral}
+\end{equation}
+
+El modelo M3-U añade además el logaritmo del gasto del año anterior
+($\log G_{i,t-1}$). Si $\delta > 0$, la espera excesiva genera un efecto de
+expulsión hacia el sector privado (efecto \textit{exit} de Hirschman).
+\subsection{Errores estándar robustos agrupados}
+
+En todos los modelos se emplean \textbf{errores estándar agrupados} (clustered)
+por comunidad autónoma para corregir la heterocedasticidad y la
+autocorrelación serial dentro de cada grupo \parencite{Cameron2015}:
+
+\begin{equation}
+  \widehat{\text{Var}}_{\text{cluster}}(\hat{\beta}) =
+  (X'X)^{-1}
+  \left(\sum_{i=1}^{N} X_i' \hat{u}_i \hat{u}_i' X_i\right)
+  (X'X)^{-1}
+  \label{eq:cluster_se}
+\end{equation}
+
+donde $\hat{u}_i = (\hat{u}_{i1}, \ldots, \hat{u}_{iT})'$ es el vector de
+residuos para la unidad $i$. Esta corrección es especialmente relevante dado el
+panel corto ($T=9$) con potencial dependencia temporal en las perturbaciones.
+
+% ------------------------------------------------------------
+\section{Síntesis de la estrategia metodológica}
+% ------------------------------------------------------------
+
+La Tabla~\ref{tab:sintesis_metod} resume las decisiones metodológicas adoptadas
+y su justificación.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Síntesis de decisiones metodológicas}
+  \label{tab:sintesis_metod}
+  \begin{threeparttable}
+    \small
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{p{4cm} p{3.5cm} p{6cm}}
+      \toprule
+      \textbf{Aspecto} & \textbf{Decisión} & \textbf{Justificación} \\
+      \midrule
+      Estructura de datos & Panel (17 CCAA, 2016--2024) &
+        Captura heterogeneidad territorial; elimina endogeneidad de omisión \\
+      Efectos individuales & Efectos fijos (FE base) &
+        Hausman $\chi^2(4)=11{,}44$ ($p=0{,}022$) rechaza ortogonalidad; FE consistente \\
+      Especificación funcional & Log-log para gasto y PIB &
+        Permite interpretación directa como elasticidad \\
+      Efecto espera (M1, M2) & Retardos 1 y 2 períodos &
+        Coherente con Ley de Little; decisión diferida \\
+      No linealidad (M1-U, M3-U) & Umbral 100 días &
+        Captura efecto de expulsión (\textit{exit}) de Hirschman \\
+      Persistencia (M3, M3-U) & Log gasto en seguros $t-1$ &
+        Elasticidad de persistencia; hábito de consumo \\
+      Inferencia & Errores agrupados por CCAA &
+        Corrige autocorrelación serial y heterocedasticidad \\
+      Cointegración & Contrastes Pedroni y Kao &
+        Garantiza que la relación $I(1)/I(1)$ no es espuria \\
+      \bottomrule
+    \end{tabular}}% fin resizebox
+    \begin{tablenotes}[flushleft]
+      \footnotesize
+      \item Nota: Todas las estimaciones realizadas en Python 3.11 con el paquete
+        \texttt{linearmodels}.
+    \end{tablenotes}
+  \end{threeparttable}
+\end{table}

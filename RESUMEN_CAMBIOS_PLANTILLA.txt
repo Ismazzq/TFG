@@ -1,0 +1,116 @@
+═══════════════════════════════════════════════════════════════════
+  RESUMEN DE CAMBIOS REALIZADOS EN EL TFG
+  ACTUALIZACIÓN: 28 de febrero de 2026
+═══════════════════════════════════════════════════════════════════
+
+✨ CAMBIOS PARA SEGUIR LA PLANTILLA OFICIAL UMU ✨
+
+1. 📄 PORTADA MODIFICADA (SEGÚN PLANTILLA OFICIAL):
+   ✅ Formato oficial: "MEMORIA DEL TRABAJO FIN DE GRADO" (48pt)
+   ✅ Dos logos institucionales en la parte superior:
+      - Logo Universidad de Murcia (izquierda)
+      - Logo Facultad de Economía y Empresa (derecha)
+   ✅ Título del TFG en tamaño 32pt, color azul corporativo
+   ✅ Autor: Ismael Quesada García (tamaño 24pt)
+   ✅ "Grado en Economía" y "Curso 2025-2026" centrados
+   ✅ Tutor: Fernando Ignacio Sánchez Martínez
+   ✅ Área: Economía de las Políticas Sociales
+
+2. 📋 RESUMEN EN ESPAÑOL (MÁXIMO 300 PALABRAS):
+   ✅ Título: "RESUMEN (máximo 300 palabras)"
+   ✅ Ubicación: Después del índice, ANTES de la introducción
+   ✅ Incluye palabras clave al final
+   ✅ Formato según normativa UMU
+   ✅ Cumple con el límite de 300 palabras
+
+3. 🌍 SUMMARY EN INGLÉS (MÍNIMO 1.000 PALABRAS) - NUEVO:
+   ✅ Título: "SUMMARY (Mínimo 1.000 palabras)"
+   ✅ Ubicación: AL FINAL del documento, DESPUÉS de la Bibliografía
+   ✅ Contiene aproximadamente 1,100 palabras
+   ✅ Estructura completa en inglés:
+      • Research Context and Motivation
+      • Theoretical Framework: Shadow Price of Waiting Times
+      • Research Hypotheses
+      • Methodology and Data
+      • Main Results
+      • Policy Implications and Conclusions
+   ✅ Incluye Keywords al final
+   ✅ Según plantilla oficial UMU
+
+4. 🖼️ LOGOS INSTITUCIONALES:
+   ✅ Carpeta "figuras" creada en: TFG_Econometria_Salud/figuras/
+   ✅ Código LaTeX preparado para cargar automáticamente:
+      - logo_umu.png (escudo Universidad de Murcia)
+      - logo_facultad.png (logo Facultad de Economía y Empresa)
+   ✅ El documento funciona con o sin los logos
+   ✅ Instrucciones detalladas en: figuras/INSTRUCCIONES_LOGOS.txt
+
+═══════════════════════════════════════════════════════════════════
+
+⚙️ OPTIMIZACIONES DE ESPACIO (MANTENIDAS):
+
+5. 📏 MÁRGENES OPTIMIZADOS:
+   • Superior: 1.8cm
+   • Inferior: 1.8cm
+   • Izquierdo: 2.3cm
+   • Derecho: 1.8cm
+
+6. 📊 INTERLINEADO:
+   • Interlineado general: 1.2
+   • Espacio entre párrafos: 1.5pt
+
+7. 🔢 ECUACIONES:
+   • Espacio reducido pero manteniendo líneas entre fórmulas
+   • abovedisplayskip: 4pt
+   • belowdisplayskip: 4pt
+
+8. 📑 TÍTULOS Y SECCIONES:
+   • Capítulos: Espacio optimizado (-18pt antes, 10pt después)
+   • Secciones: 8pt/4pt
+   • Subsecciones: 6pt/2pt
+   • Tabla de contenidos optimizada con paquete tocloft
+
+9. 📋 LISTAS Y TABLAS:
+   • Listas: topsep 1pt, sin partopsep
+   • Tablas: Caption con font=small, skip=3pt
+   • Figuras: Espacios reducidos a 5pt
+
+═══════════════════════════════════════════════════════════════════
+
+✅ RESULTADO FINAL:
+
+• Documento compilado: main.pdf
+• Total de páginas: 42 páginas
+• Tamaño: 782,867 bytes
+• Referencias bibliográficas: Procesadas correctamente con biber
+• Estilo bibliográfico: APA (según normativa UMU)
+• Formato: Cumple con plantilla oficial UMU
+
+═══════════════════════════════════════════════════════════════════
+
+📝 PRÓXIMOS PASOS PARA COMPLETAR:
+
+1. Coloca los logos en la carpeta figuras:
+   • Guarda el logo del escudo como: figuras/logo_umu.png
+   • Guarda el logo de la facultad como: figuras/logo_facultad.png
+
+2. Recompila el documento:
+   cd "c:\Users\ismae\OneDrive\Escritorio\TFG_Econometria_Salud"
+   pdflatex main.tex
+   biber main
+   pdflatex main.tex
+
+3. Los logos aparecerán automáticamente en la portada
+
+═══════════════════════════════════════════════════════════════════
+
+ℹ️ NOTAS IMPORTANTES:
+
+• El documento sigue EXACTAMENTE la estructura de la plantilla oficial
+• El Summary en inglés está al FINAL (no al principio)
+• El Resumen en español tiene el límite de palabras indicado
+• La portada tiene el formato "MEMORIA DEL TRABAJO FIN DE GRADO"
+• Los logos se cargan automáticamente si existen los archivos
+• Si no colocas los logos, el documento compila sin errores
+
+═══════════════════════════════════════════════════════════════════

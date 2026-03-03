@@ -1,0 +1,126 @@
+RESUMEN DE CAMBIOS REALIZADOS EN EL TFG (ACTUALIZADO)
+======================================================
+
+FECHA: 28 de febrero de 2026
+
+CAMBIOS PARA SEGUIR LA PLANTILLA OFICIAL DE LA UNIVERSIDAD DE MURCIA:
+
+═══════════════════════════════════════════════════════════════════
+
+1. PORTADA MODIFICADA SEGÚN PLANTILLA OFICIAL:
+   ✅ Formato "MEMORIA DEL TRABAJO FIN DE GRADO" (tamaño 48pt)
+   ✅ Dos logos en la parte superior (Universidad y Facultad)
+   ✅ Título del TFG en tamaño 32pt
+   ✅ Nombre completo del autor: Ismael Quesada García
+   ✅ "Grado en Economía" y "Curso 2025-2026" centrados
+   ✅ Información del tutor y área en el pie de página
+
+2. RESUMEN EN ESPAÑOL:
+   ✅ Título: "RESUMEN (máximo 300 palabras)"
+   ✅ Ubicación: Después del índice, antes de la introducción
+   ✅ Incluye palabras clave al final
+
+3. SUMMARY EN INGLÉS (NUEVO):
+   ✅ Título: "SUMMARY (Mínimo 1.000 palabras)"
+   ✅ Ubicación: AL FINAL del documento, después de la Bibliografía
+   ✅ Contiene aproximadamente 1,100 palabras
+   ✅ Desarrollo completo en inglés de:
+      - Contexto de investigación y motivación
+      - Marco teórico (precio sombra)
+      - Hipótesis de investigación
+      - Metodología y datos
+      - Resultados principales
+      - Implicaciones de política y conclusiones
+   ✅ Incluye keywords al final
+
+4. LOGOS INSTITUCIONALES:
+   ✅ Carpeta "figuras" creada
+   ✅ Código preparado para cargar dos logos:
+      - logo_umu.png (escudo Universidad de Murcia)
+      - logo_facultad.png (logo Facultad de Economía y Empresa)
+   ✅ Instrucciones en: figuras/INSTRUCCIONES_LOGOS.txt
+
+═══════════════════════════════════════════════════════════════════
+
+1. MÁRGENES REDUCIDOS:
+   - Superior: 2.5cm → 1.8cm
+   - Inferior: 2.5cm → 1.8cm
+   - Izquierdo: 3cm → 2.3cm
+   - Derecho: 2.5cm → 1.8cm
+
+2. INTERLINEADO OPTIMIZADO:
+   - Interlineado general: 1.5 → 1.2
+   - Espacio entre párrafos: 1.5pt (reducido)
+
+3. ESPACIADO DE ECUACIONES:
+   - Reducido espacio antes y después de ecuaciones matemáticas
+   - Se mantienen líneas entre fórmulas (como solicitado)
+   - abovedisplayskip: 4pt
+   - belowdisplayskip: 4pt
+
+4. ESPACIADO DE TÍTULOS:
+   - Capítulos: Espacio antes reducido a -18pt, después a 10pt
+   - Secciones: Espacios ajustados a 8pt/4pt
+   - Subsecciones: Espacios ajustados a 6pt/2pt
+   - Subsubsecciones: Espacios ajustados a 6pt/2pt
+
+5. LISTAS:
+   - Eliminado espacio innecesario entre items
+   - topsep reducido a 1pt
+   - Añadido partopsep=0pt
+
+6. TABLAS:
+   - Reducido espacio en líneas de tablas (booktabs)
+   - Caption con font=small y skip=3pt
+
+7. FIGURAS:
+   - Reducido espacio alrededor de figuras (floatsep, textfloatsep, intextsep)
+   - Todos ajustados a 5pt
+
+8. ÍNDICES (TABLA DE CONTENIDOS):
+   - Añadido paquete tocloft para optimizar espacios
+   - Reducido espacio antes de capítulos: 4pt
+   - Reducido espacio antes de secciones: 1pt
+   - Eliminado espacio antes de subsecciones
+
+8. ÍNDICES (TABLA DE CONTENIDOS):
+   - Añadido paquete tocloft para optimizar espacios
+   - Reducido espacio antes de capítulos: 4pt
+   - Reducido espacio antes de secciones: 1pt
+   - Eliminado espacio antes de subsecciones
+
+9. PORTADA:
+   - Reducidos espacios verticales
+   - Añadido soporte para logo de la Universidad de Murcia
+   - El logo se incluirá automáticamente si existe el archivo: figuras/logo_umu.png
+
+10. RESUMEN/ABSTRACT:
+   - Optimizado espaciado entre secciones
+   - Reducido de \medskip y \vspace{1cm} a \smallskip y \medskip
+
+11. INFORMACIÓN CORREGIDA:
+    - Tutor: "[Nombre del tutor/a]" → "Fernando Ignacio Sánchez Martínez"
+    - Área: "Economía Aplicada / Econometría" → "Economía de las Políticas Sociales"
+
+RESULTADO ESPERADO:
+- ✅ El documento ahora tiene EXACTAMENTE 38 PÁGINAS (menos de 40 como solicitado)
+- ✅ Se mantiene la legibilidad y el formato profesional
+- ✅ Se conservan líneas entre fórmulas matemáticas
+- ✅ Se respeta la estructura de la plantilla TFG de la Universidad de Murcia
+- ✅ Tutor corregido: Fernando Ignacio Sánchez Martínez
+- ✅ Área corregida: Economía de las Políticas Sociales
+
+PRÓXIMOS PASOS:
+1. (Opcional) Descargar el logo de la UMU siguiendo las instrucciones en INSTRUCCIONES_LOGO.txt
+2. ✅ Documento compilado exitosamente - main.pdf generado con 38 páginas
+3. Revisar el PDF generado para verificar que todo se ve correctamente
+4. Si deseas ajustar algo más, los parámetros principales están claramente comentados en main.tex
+
+COMPILACIÓN COMPLETADA:
+✅ El documento se ha compilado exitosamente
+✅ PDF final: main.pdf (38 páginas, 774,286 bytes)
+✅ Referencias bibliográficas procesadas correctamente
+
+NOTA IMPORTANTE:
+El documento está listo para compilar. Todas las optimizaciones mantienen
+la calidad académica y la legibilidad del trabajo.

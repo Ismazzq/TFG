@@ -1,0 +1,142 @@
+% ============================================================
+%  CAPÍTULO 9: CONCLUSIONES
+% ============================================================
+\chapter{Conclusiones}
+\label{cap:conclusiones}
+
+% ------------------------------------------------------------
+\section{Síntesis de los resultados}
+% ------------------------------------------------------------
+
+Este Trabajo de Fin de Grado ha investigado los determinantes del gasto en seguros
+sanitarios privados en España utilizando un panel de datos de las 17 comunidades
+autónomas para el período 2016--2024. El marco teórico, basado en el modelo de
+demanda de salud de Grossman y en la Ley de Little, predijo cuatro hipótesis
+susceptibles de contraste empírico. Los resultados de las estimaciones econométricas
+han permitido responderlas sistemáticamente.
+
+La Tabla~\ref{tab:conclusiones_hip} resume el estado final de cada hipótesis a
+la luz de la evidencia.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Estado final de las hipótesis de investigación}
+  \label{tab:conclusiones_hip}
+  \begin{threeparttable}
+    \small
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{clp{4cm}lc}
+      \toprule
+      \textbf{Hip.} & \textbf{Enunciado resumido}
+        & \textbf{Resultado clave}
+        & \textbf{Veredicto}
+        & \textbf{Modelo} \\
+      \midrule
+      H1 & Bien de lujo ($\varepsilon_Y > 1$) &
+        $\hat{\beta}_1 = 1{,}02^{***}$ (FE) &
+        \textbf{Confirmada} & M1-FE \\
+      H2 & Esperas $\uparrow \Rightarrow$ seguros $\uparrow$ (lineal) &
+        $\hat{\gamma} = 0{,}0002$ (n.s.) &
+        No confirmada & M1-FE \\
+      H3 & Efecto diferido (retardos) &
+        Wald $\chi^2(2) = 0{,}39$ ($p = 0{,}82$) &
+        No confirmada & M2-FE \\
+      H4 & Efecto umbral ($\tau = 100$ días) &
+        $\hat{\delta} = 0{,}093^{**}$ ($p=0{,}017$) &
+        \textbf{Confirmada} & M1-U \\
+      H5 & Inercia del gasto &
+        $\hat{\rho} = 0{,}210^{*}$ ($p=0{,}075$) &
+        Parcialmente confirmada & M3-FE \\
+      \bottomrule
+    \end{tabular}}% fin resizebox
+    \begin{tablenotes}[flushleft]
+      \footnotesize
+      \item $*$ $p < 0{,}10$;\quad $**$ $p < 0{,}05$;\quad $***$ $p < 0{,}01$.
+      \item Test de Hausman ($\chi^2(4)=11{,}44$, $p=0{,}022$) indica M1-FE como
+        modelo preferido.
+    \end{tablenotes}
+  \end{threeparttable}
+\end{table}
+
+Las cinco hipótesis han sido contrastadas con la evidencia empírica. Los resultados
+más robustos son H1 (elasticidad renta significativa, $\hat{\beta} = 1{,}02$) y
+H4 (efecto umbral significativo al 5\%). H5 (inercia del gasto) queda
+parcialmente confirmada con significatividad al 10\% ($p = 0{,}075$). H2 (efecto
+lineal de la espera) y H3 (efecto diferido con retardos) no quedan confirmadas:
+el mecanismo de transmisión de las listas de espera hacia el gasto privado no
+opera de forma lineal ni acumulativa, sino a través del efecto umbral.
+
+% ------------------------------------------------------------
+\section{Aportaciones principales del trabajo}
+% ------------------------------------------------------------
+
+Las contribuciones originales de este trabajo son las siguientes:
+
+\begin{enumerate}
+  \item \textbf{Primera estimación sistemática con datos de panel para las CCAA
+    españolas} del período post-descentralización (2016--2024), incorporando el
+    impacto de la pandemia COVID-19 como variable de control.
+  \item \textbf{Identificación del efecto umbral}: la introducción de la variable
+    dummy a 100 días demuestra que el efecto de las listas de espera opera de
+    forma no lineal ---un incremento del 9{,}3\% en el gasto cuando se supera el umbral.
+  \item \textbf{Documentación de la persistencia del gasto}: el modelo con gasto
+    anterior (M3) revela inercia moderada en las decisiones de contratación,
+    reflejando renovación de pólizas y formación de hábitos ($\hat{\rho}=0{,}21$,
+    $p=0{,}075$).
+  \item \textbf{Elasticidad renta como bien de lujo}: confirmación de que
+    el seguro sanitario privado tiene elasticidad renta cercana o superior a uno
+    ($1{,}02$ bajo FE, $1{,}54$ bajo RE), clasificándolo como bien de lujo a
+    escala regional.
+\end{enumerate}
+
+% ------------------------------------------------------------
+\section{Aportaciones para la política sanitaria}
+% ------------------------------------------------------------
+
+Los resultados del trabajo tienen implicaciones directas para el diseño de la
+política sanitaria en España:
+
+\begin{description}
+  \item[Implicación I --- Gestión de listas de espera:] Reducir los tiempos de
+    espera en consulta de especialistas por debajo del umbral de 100 días
+    reduciría el gasto en seguros privados y reforzaría la cohesión del sistema
+    sanitario público. El efecto umbral significativo (H4) implica que la
+    prioridad debe focalizarse en las CCAA que superan este límite.
+
+  \item[Implicación II --- Equidad:] La elasticidad renta superior a la unidad
+    advierte de que el crecimiento económico, en ausencia de intervención política,
+    tenderá a ampliar la segmentación entre usuarios del sistema público y del
+    privado.
+
+  \item[Implicación III --- Financiación autonómica:] Dado que las CCAA con mayor
+    renta per cápita presentan mayor gasto en seguros privados, el sistema de
+    financiación autonómica debería calibrar el esfuerzo sanitario considerando
+    la demanda potencial sobre el sistema público, que es mayor en la medida en
+    que la renta impulsa la salida de usuarios al sector privado.
+
+  \item[Implicación IV --- Impacto del COVID-19:] El incremento del gasto en
+    seguros privados durante 2020 (+17\% según M1-RE, +9\% según M1-FE) sugiere
+    que las crisis sanitarias pueden acelerar la segmentación del sistema. Los
+    sistemas sanitarios que dependen de la complementariedad público-privada
+    deben planificar mecanismos de resiliencia que eviten que el colapso del
+    sector público expulse a los hogares con capacidad de pago hacia
+    alternativas privadas.
+\end{description}
+
+% ------------------------------------------------------------
+\section{Reflexión final}
+% ------------------------------------------------------------
+
+La evidencia acumulada en este trabajo apunta a que el sistema sanitario español
+funciona en la práctica como un \textbf{sistema de dos niveles}: un nivel público
+universal al que acceden todos los ciudadanos, y un nivel privado complementario
+que canaliza la demanda de los hogares con mayor renta y menor tolerancia a la
+espera. Esta arquitectura dual no es ni inevitable ni necesariamente indeseable,
+pero requiere una gestión activa para evitar que la calidad del primer nivel
+se deteriore a medida que el segundo crece.
+
+La sanidad como bien de lujo no es un destino irremediable, pero es una tendencia
+que solo se puede reorientar mediante decisiones de política pública explícitas:
+inversión en reducción de tiempos de espera, transparencia en la calidad de los
+servicios públicos y financiación equitativa del SNS. La econometría no dicta esas
+decisiones, pero sí proporciona las magnitudes que permiten evaluarlas con rigor.

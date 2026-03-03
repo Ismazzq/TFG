@@ -1,0 +1,26 @@
+INSTRUCCIONES PARA COLOCAR LOS LOGOS EN LA PORTADA
+===================================================
+
+Para que los logos aparezcan correctamente en la portada del TFG según la plantilla oficial,
+debes guardar las dos imágenes que adjuntaste en esta carpeta con estos nombres:
+
+1. LOGO DE LA UNIVERSIDAD DE MURCIA:
+   - Nombre del archivo: logo_umu.png
+   - La imagen del escudo rojo con las tres coronas
+   - Debe colocarse en: figuras/logo_umu.png
+
+2. LOGO DE LA FACULTAD DE ECONOMÍA Y EMPRESA:
+   - Nombre del archivo: logo_facultad.png
+   - La imagen naranja/roja con el símbolo de la facultad
+   - Debe colocarse en: figuras/logo_facultad.png
+
+PASOS:
+------
+1. Guarda la imagen del escudo de la Universidad como "logo_umu.png" en esta carpeta
+2. Guarda la imagen de la Facultad como "logo_facultad.png" en esta carpeta
+3. Compila el documento LaTeX
+
+Los logos aparecerán automáticamente en la parte superior de la portada, uno a cada lado,
+tal como indica la plantilla oficial de la Universidad de Murcia.
+
+Si no colocas los archivos, el documento se compilará igualmente sin los logos.

@@ -1,0 +1,97 @@
+% ============================================================
+%  CAPÍTULO 8: LIMITACIONES
+% ============================================================
+\chapter{Limitaciones del estudio}
+\label{cap:limitaciones}
+
+% ------------------------------------------------------------
+\section{Limitaciones de los datos}
+% ------------------------------------------------------------
+
+El análisis empírico del presente trabajo está sujeto a un conjunto de
+limitaciones que deben tenerse en cuenta al interpretar los resultados.
+
+\subsection{Disponibilidad y calidad estadística de las fuentes}
+
+La Encuesta de Presupuestos Familiares (EPF) utilizada como fuente de la variable
+dependiente mide el gasto \textbf{declarado} por los hogares, lo que puede
+subestimar el gasto real si los encuestados olvidan o infravaloran el coste de las
+primas de seguro de salud incluidas en nómina o en coberturas empresariales. La
+EPF tampoco distingue entre seguros de salud individuales y colectivos, lo que
+impide aislar el componente de decisión voluntaria del hogar.
+
+\subsection{Período temporal y variación}
+
+El panel cubre 2016--2024, un período de nueve años que incluye cambios
+significativos (pandemia 2020, reforma de listas de espera 2022). La limitación del
+horizonte temporal restringe el número de observaciones disponibles para las
+estimaciones con retardos ($T-2 = 7$ períodos efectivos) y limita la potencia
+estadística de los contrastes de raíz unitaria y cointegración. Una extensión del
+panel hasta 2030, actualmente no disponible, permitiría mayor precisión en la
+estimación del multiplicador de largo plazo.
+
+\subsection{Ausencia de datos de precio de las primas}
+
+El modelo teórico predice que el precio relativo del seguro privado respecto al
+coste del servicio público es el mecanismo central de decisión. Sin embargo, el
+precio de las primas de seguros sanitarios no está disponible a nivel de CCAA en
+series temporales homologables. La omisión de esta variable puede generar un sesgo
+de variable omitida si el precio de los seguros está correlacionado con el PIB
+per cápita o con los tiempos de espera.
+
+\subsection{Heterogeneidad en los sistemas de espera}
+
+Los datos de SISLE-SNS presentan heterogeneidad en la metodología de registro
+entre CCAA. Algunas comunidades registran las esperas de forma continua mientras
+otras lo hacen puntualmente, lo que puede introducir ruido de medición en la
+variable $\text{Espera}_{it}$. Este error de medición, si es clásico, sesga los
+coeficientes hacia cero (atenuación), lo que implica que el efecto real de la
+espera sobre el gasto en seguros sería \textbf{mayor} que el estimado.
+
+% ------------------------------------------------------------
+\section{Limitaciones metodológicas}
+% ------------------------------------------------------------
+
+\subsection{Endogeneidad potencial}
+
+Aunque los efectos fijos eliminan la heterogeneidad no observada constante en el
+tiempo, existe la posibilidad de \textbf{endogeneidad simultánea}: una CCAA con
+mayor demanda de seguros privados (debido a características no observadas de su
+población) podría ejercer menos presión política para reducir las listas de espera.
+Este canal inverso ---seguros $\rightarrow$ espera--- no ha podido instrumentarse
+por falta de instrumentos exógenos válidos a nivel de CCAA.
+
+\subsection{Umbral endógeno}
+
+El umbral de 100 días utilizado en M3 es establecido \textit{a priori} con base en
+los estándares del SISLE-SNS. Un análisis formal de umbral endógeno
+\parencite{Maddala1999} con estimación del punto de ruptura óptimo mejoraría la
+especificación del modelo M3, aunque requeriría un número de observaciones mayor
+que el disponible para garantizar la potencia estadística.
+
+\subsection{Ausencia de nivel microeconómico}
+
+El análisis trabaja a nivel de CCAA, lo que impide identificar el comportamiento
+del hogar individual. Idealmente, se requeriría datos de panel a nivel de hogar
+(combinando EPF longitudinal con datos de salud) para contrastar si los hogares
+de mayor renta reaccionan más intensamente a los incrementos de listas de espera.
+
+% ------------------------------------------------------------
+\section{Implicaciones para futuras investigaciones}
+% ------------------------------------------------------------
+
+Las limitaciones identificadas sugieren cuatro líneas de extensión:
+
+\begin{enumerate}
+  \item \textbf{Datos de panel de hogares:} Combinar la EPF con el módulo de salud
+    de la Encuesta Nacional de Salud (ENS) y datos de SISLE-SNS a nivel de hogar.
+  \item \textbf{Instrumentos para la endogeneidad:} Utilizar cambios en la
+    financiación autonómica o reformas de gestión hospitalaria como instrumentos
+    para las listas de espera.
+  \item \textbf{Análisis de umbral endógeno:} Cuando el panel se amplíe a 15
+    o más períodos, estimar el punto de ruptura óptimo $\tau^*$ mediante los
+    estimadores de \textcite{Maddala1999}.
+  \item \textbf{Extensión internacional:} Comparar los resultados con países
+    con sistemas tipo NHS similares al español (Italia, Portugal, Grecia) para
+    identificar patrones comunes.
+\end{enumerate}

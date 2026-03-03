@@ -1,0 +1,25 @@
+INSTRUCCIONES PARA AÑADIR EL LOGO DE LA UNIVERSIDAD DE MURCIA
+================================================================
+
+Para que el logo aparezca en la portada del TFG, necesitas:
+
+1. Descargar el logo oficial de la Universidad de Murcia:
+   - Visita: https://www.um.es/web/universidad/contenido/identidad-corporativa
+   - O busca en Google: "logo universidad de murcia png"
+   - Descarga el logo en formato PNG con fondo transparente
+
+2. Guardar el archivo:
+   - Guarda el logo como: logo_umu.png
+   - Colócalo en la carpeta: TFG_Econometria_Salud/figuras/
+
+3. El código LaTeX ya está configurado para incluir automáticamente el logo
+   si el archivo existe en la ruta correcta.
+
+ALTERNATIVA: Si no puedes conseguir el logo, comenta las líneas del logo
+en el archivo main.tex (líneas 183-185) eliminando o comentando:
+    % Logo de la Universidad de Murcia
+    \IfFileExists{figuras/logo_umu.png}{%
+      \includegraphics[width=0.25\textwidth]{logo_umu.png}\\[0.5cm]
+    }{}
+
+El documento se compilará correctamente con o sin el logo.

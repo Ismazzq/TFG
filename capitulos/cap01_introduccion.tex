@@ -1,0 +1,167 @@
+% ============================================================
+%  CAPÍTULO 1: INTRODUCCIÓN
+% ============================================================
+\chapter{Introducción}
+\label{cap:introduccion}
+
+% ------------------------------------------------------------
+\section{Motivación y contexto del problema}
+% ------------------------------------------------------------
+
+El Sistema Nacional de Salud (SNS) español atraviesa una crisis estructural cuya
+manifestación más visible son las \textbf{listas de espera}. Según datos del
+Ministerio de Sanidad, a finales de 2023 más de 800.000 pacientes aguardaban una
+intervención quirúrgica, con tiempos medios que en algunas comunidades autónomas
+superaban los 150 días para consultas con especialistas. Esta situación no es
+coyuntural: desde 2016 se observa una tendencia sostenida al alza, interrumpida
+únicamente ---y de forma paradójica--- por la pandemia de COVID-19, que redujo las
+listas mediante la suspensión masiva de actividad programada para después
+dispararse a niveles históricos durante la recuperación.
+
+La persistencia y magnitud del problema de las listas de espera plantea
+interrogantes fundamentales sobre la sostenibilidad del modelo sanitario español
+y, de forma más específica, sobre las \textbf{respuestas adaptativas de los
+hogares} ante el deterioro percibido del servicio público. En un sistema de
+cobertura universal y gratuita en el punto de uso, ¿qué factores determinan que
+una proporción creciente de la población opte por contratar un seguro sanitario
+privado complementario? ¿Constituyen los tiempos de espera un factor de expulsión
+(\textit{push factor}) mesurable empíricamente? ¿Y, de ser así, cómo opera
+temporalmente este mecanismo?
+
+Este trabajo aborda estas cuestiones desde la \textbf{economía de la salud} y la
+\textbf{econometría de datos de panel}, combinando un marco teórico riguroso con
+evidencia empírica original para España.
+
+% ------------------------------------------------------------
+\section{La teoría del precio sombra aplicada a la sanidad pública}
+% ------------------------------------------------------------
+
+El punto de partida teórico de este estudio es la constatación de que la sanidad
+pública, aunque formalmente gratuita, conlleva \textbf{costes implícitos} para el
+usuario. El tiempo de espera constituye el principal de estos costes: semanas o
+meses de incertidumbre diagnóstica, dolor no tratado, incapacidad laboral temporal
+o deterioro de la calidad de vida. Este coste temporal puede formalizarse mediante
+el concepto económico de \textbf{precio sombra} (\textit{shadow price}).
+
+El precio sombra del tiempo de espera representa el valor monetario implícito que
+el hogar atribuye al período que transcurre desde que solicita una cita con el
+especialista hasta que efectivamente la obtiene. Para un trabajador con salario
+elevado, cada día de espera tiene un coste de oportunidad mayor (salario
+renunciado, productividad perdida). Para un paciente con patología progresiva,
+cada día sin tratamiento supone un deterioro adicional de su stock de salud.
+Cuando el precio sombra de la sanidad pública aumenta (porque las esperas se
+alargan), el \textbf{precio relativo} del seguro privado disminuye, estimulando
+su demanda.
+
+Esta perspectiva conecta directamente con la tradición de \textcite{Grossman1972}
+sobre la demanda de salud como capital humano y con la literatura posterior sobre
+elección entre sectores sanitarios \parencite{Propper2000, Besley1999}. La
+aportación específica de este trabajo consiste en operacionalizar el precio sombra
+mediante los \textbf{días de espera en consulta de especialistas} y contrastar
+empíricamente su efecto sobre el gasto en seguros privados de los hogares
+españoles.
+
+% ------------------------------------------------------------
+\section{Pregunta de investigación e hipótesis}
+% ------------------------------------------------------------
+
+La pregunta central que guía este estudio es:
+
+\begin{quote}
+\textit{¿Cuáles son los determinantes del gasto de los hogares españoles en
+seguros sanitarios privados, y qué papel desempeñan los tiempos de espera del
+sistema público en esta decisión?}
+\end{quote}
+
+A partir del marco teórico, formulamos las siguientes hipótesis operativas:
+
+\begin{description}
+  \item[\textbf{H1} (Efecto renta):] El gasto en seguros sanitarios privados es
+    una función creciente de la renta disponible, con elasticidad superior a la
+    unidad (bien superior).
+
+  \item[\textbf{H2} (Efecto precio sombra):] Un aumento de los tiempos de espera
+    del sistema público eleva el gasto en seguros privados, al reducir el precio
+    relativo de estos últimos.
+
+  \item[\textbf{H3} (Efecto diferido):] La respuesta de los hogares a los cambios
+    en los tiempos de espera no es instantánea, sino que se materializa con un
+    \textbf{rezago de 1--2 años}, debido a la inercia contractual de los seguros,
+    los períodos de carencia y los costes de búsqueda de información.
+
+  \item[\textbf{H4} (Efecto umbral):] Existe un umbral crítico de tiempo de espera
+    (estimado en \textbf{100 días}) a partir del cual la respuesta de los hogares
+    se intensifica de forma no lineal.
+
+  \item[\textbf{H5} (Persistencia del gasto):] El gasto en seguros sanitarios
+    privados presenta inercia temporal, de modo que el consumo pasado influye
+    positivamente en el actual debido a la renovación de pólizas y hábitos.
+\end{description}
+
+% ------------------------------------------------------------
+\section{Originalidad y contribución del trabajo}
+% ------------------------------------------------------------
+
+Este Trabajo de Fin de Grado realiza varias contribuciones originales:
+
+\textbf{Primero}, construye un \textbf{panel de datos autonómico} (17 CCAA,
+2016--2024) que combina información del INE (gasto en seguros, PIB per cápita,
+demografía) y del Ministerio de Sanidad (tiempos de espera), permitiendo un
+análisis que explota tanto la variación transversal como la
+temporal de las variables.
+
+\textbf{Segundo}, introduce la \textbf{Ley de Little} de la teoría de colas como
+fundamento para la elección de los días de espera ---y no el número de pacientes
+en lista--- como \textit{proxy} de saturación del sistema público percibida por el
+hogar.
+
+\textbf{Tercero}, estima modelos econométricos que capturan el \textbf{efecto
+diferido} de los tiempos de espera sobre el gasto privado, mediante la inclusión
+de retardos temporales cuya significatividad conjunta se verifica mediante tests
+de Wald.
+
+\textbf{Cuarto}, explora la posible \textbf{no linealidad de umbral}: ¿reaccionan
+los hogares de forma más intensa cuando las esperas superan un punto crítico
+psicológicamente significativo?
+
+\textbf{Quinto}, documenta la \textbf{persistencia dinámica} del gasto en seguros
+privados, coherente con la naturaleza de los contratos anuales y la inercia de los
+hábitos de consumo sanitario.
+
+Los resultados principales confirman que la renta es el determinante dominante
+(elasticidad $\approx 1{,}02$ en el modelo de efectos fijos preferido). Los
+tiempos de espera en su forma lineal y diferida no resultan conjuntamente
+significativos (Wald $\chi^2(2) = 0{,}39$, $p = 0{,}82$); sin embargo, la
+especificación \textbf{no lineal de umbral} sí capta un efecto robusto: superar
+los 100 días de espera eleva el gasto en seguros privados un \textbf{9{,}3\%}
+($p = 0{,}017$).
+Adicionalmente, el gasto en seguros privados \textbf{aumentó} durante la pandemia
+de COVID-19, coherente con el incremento del precio sombra de la sanidad pública
+durante la crisis.
+
+% ------------------------------------------------------------
+\section{Estructura del trabajo}
+% ------------------------------------------------------------
+
+El trabajo se organiza en nueve capítulos:
+
+\begin{itemize}
+  \item El \textbf{Capítulo~\ref{cap:contexto}} presenta el marco institucional del
+    SNS español, la evolución histórica de las listas de espera y el papel del
+    sector privado.
+  \item El \textbf{Capítulo~\ref{cap:teoria}} desarrolla el marco teórico: modelo
+    de decisión del hogar, Ley de Little y precio sombra del tiempo de espera.
+  \item El \textbf{Capítulo~\ref{cap:datos}} describe las fuentes de datos, las
+    variables y los estadísticos descriptivos del panel.
+  \item El \textbf{Capítulo~\ref{cap:metodologia}} expone la metodología
+    econométrica: efectos fijos/aleatorios, tests de cointegración, errores
+    estándar agrupados y modelo dinámico.
+  \item El \textbf{Capítulo~\ref{cap:resultados}} presenta los resultados de las
+    estimaciones y su interpretación económica.
+  \item El \textbf{Capítulo~\ref{cap:discusion}} discute las implicaciones de los
+    hallazgos para la política sanitaria.
+  \item El \textbf{Capítulo~\ref{cap:limitaciones}} reconoce las limitaciones del
+    estudio.
+  \item El \textbf{Capítulo~\ref{cap:conclusiones}} sintetiza las conclusiones y
+    propone líneas de investigación futura.
+\end{itemize}
