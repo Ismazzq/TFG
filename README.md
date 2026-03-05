@@ -20,5 +20,3 @@ Para conectar con un repositorio remoto (GitHub/GitLab), crea un repositorio rem
 git remote add origin <URL-REMOTE>
 git push -u origin main
 ``` 
-
-Nota: Este repositorio fue inicializado automáticamente por el asistente. Puedes pedirme que cree también el remoto y empuje los cambios si me das acceso o la URL del repositorio remoto.
