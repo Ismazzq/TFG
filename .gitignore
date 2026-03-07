@@ -37,3 +37,4 @@ node_modules/
 # Ignore large binaries (change if you want to track generated images)
 *.png
 *.jpg
+.Rhistory
