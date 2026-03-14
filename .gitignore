@@ -1,0 +1,40 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.pdf
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.env
+
+# MacOS
+.DS_Store
+
+# VSCode
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Temporary files
+*~
+*.bak
+
+# Node/npm (if any)
+node_modules/
+
+# Ignore large binaries (change if you want to track generated images)
+*.png
+*.jpg
+.Rhistory
