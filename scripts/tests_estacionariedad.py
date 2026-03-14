@@ -15,9 +15,9 @@ from statsmodels.tsa.stattools import adfuller, coint
 import warnings
 warnings.filterwarnings("ignore")
 
-BASE_DIR = Path(__file__).resolve().parent
-RUTA_CSV    = BASE_DIR / "datos_tfg_final.csv"
-RUTA_MD     = BASE_DIR / "diagnostico_estacionariedad.md"
+BASE_DIR = Path(__file__).resolve().parent.parent
+RUTA_CSV    = BASE_DIR / "data" / "datos_tfg_final.csv"
+RUTA_MD     = BASE_DIR / "borradores" / "diagnostico_estacionariedad.md"
 
 # ── helpers ──────────────────────────────────────────────────────────────────
 def sep(titulo="", ancho=65):

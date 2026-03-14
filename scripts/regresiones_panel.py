@@ -16,9 +16,9 @@ warnings.filterwarnings("ignore")
 from linearmodels.panel import PanelOLS, RandomEffects, PooledOLS
 from linearmodels.panel.results import PanelEffectsResults
 
-BASE_DIR = Path(__file__).resolve().parent
-RUTA_CSV = BASE_DIR / "datos_tfg_final.csv"
-RUTA_MD  = BASE_DIR / "tablas_regresion.md"
+BASE_DIR = Path(__file__).resolve().parent.parent
+RUTA_CSV = BASE_DIR / "data" / "datos_tfg_final.csv"
+RUTA_MD  = BASE_DIR / "borradores" / "tablas_regresion.md"
 
 def sep(titulo="", ancho=65):
     print("\n" + "═"*ancho)

@@ -3067,41 +3067,31 @@
   <!-- CITATION DATA -->
   <!-- SECTION 0 -->
   <bcf:bibdata section="0">
-    <bcf:datasource type="file" datatype="bibtex" glob="false">referencias.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">config/referencias.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1" intorder="1">Grossman1972</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">Grossman1972</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">Propper2000</bcf:citekey>
-    <bcf:citekey order="3" intorder="2">Besley1999</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">Hirschman1970</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">Hirschman1970</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">Grossman1972</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">Grossman1972</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">Little1961</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">Kahneman1979</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">INE_EPF</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">INE_CRE</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">MinSanidad</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">INE_CRE</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">Im2003</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">Pedroni1999</bcf:citekey>
-    <bcf:citekey order="15" intorder="2">Pedroni2004</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">Pedroni1999</bcf:citekey>
-    <bcf:citekey order="16" intorder="2">Pedroni2004</bcf:citekey>
-    <bcf:citekey order="17" intorder="1">Kao1999</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">Kao1999</bcf:citekey>
-    <bcf:citekey order="19" intorder="1">Hausman1978</bcf:citekey>
-    <bcf:citekey order="20" intorder="1">Cameron2015</bcf:citekey>
-    <bcf:citekey order="21" intorder="1">Hirschman1970</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">Hirschman1970</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">Propper2000</bcf:citekey>
-    <bcf:citekey order="24" intorder="1">Propper2000</bcf:citekey>
-    <bcf:citekey order="25" intorder="1">Besley1999</bcf:citekey>
-    <bcf:citekey order="26" intorder="1">Besley1999</bcf:citekey>
-    <bcf:citekey order="27" intorder="1">Maddala1999</bcf:citekey>
-    <bcf:citekey order="28" intorder="1">Maddala1999</bcf:citekey>
-    <bcf:citekey order="29" intorder="1">Maddala1999</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">Propper2000</bcf:citekey>
+    <bcf:citekey order="2" intorder="2">Besley1999</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">Hirschman1970</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">Grossman1972</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">Little1961</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">Kahneman1979</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">INE_EPF</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">INE_CRE</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">MinSanidad</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">INE_CRE</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">Im2003</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">Pedroni1999</bcf:citekey>
+    <bcf:citekey order="12" intorder="2">Pedroni2004</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">Kao1999</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">Hausman1978</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">Cameron2015</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">Hirschman1970</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">Propper2000</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">Besley1999</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">Maddala1999</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">Maddala1999</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="apa">

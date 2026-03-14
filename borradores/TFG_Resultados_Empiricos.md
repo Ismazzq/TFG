@@ -92,7 +92,7 @@ La Figura 4.1 presenta el diagrama de dispersión entre el log del PIB per cápi
 **Figura 4.1: Gasto real en seguros privados y PIB per cápita**
 *(Archivo: `scatter_pib_gasto.png`; N = 134 observaciones)*
 
-![Dispersión log_pib_pc vs log_gasto_real](scatter_pib_gasto.png)
+![Dispersión log_pib_pc vs log_gasto_real](../figuras/scatter_pib_gasto.png)
 
 La figura revela tres patrones relevantes:
 
