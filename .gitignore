@@ -11,6 +11,8 @@
 *.bbl
 *.blg
 *.pdf
+*.bcf
+*.run.xml
 
 # Python
 __pycache__/
