@@ -17,9 +17,9 @@ warnings.filterwarnings("ignore")
 
 from linearmodels.panel import PanelOLS, RandomEffects
 
-BASE_DIR = Path(__file__).resolve().parent
-RUTA_CSV = BASE_DIR / "datos_tfg_final.csv"
-RUTA_MD  = BASE_DIR / "resultados_finales_completos.md"
+BASE_DIR = Path(__file__).resolve().parent.parent
+RUTA_CSV = BASE_DIR / "data" / "datos_tfg_final.csv"
+RUTA_MD  = BASE_DIR / "borradores" / "resultados_finales_completos.md"
 
 def sep(titulo="", ancho=65):
     print("\n" + "═"*ancho)

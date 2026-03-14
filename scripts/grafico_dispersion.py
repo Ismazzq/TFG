@@ -12,9 +12,9 @@ from scipy import stats
 import os
 
 # ── Rutas ──────────────────────────────────────────────────────────────────────
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-CSV_PATH = os.path.join(BASE_DIR, "datos_tfg_final.csv")
-OUT_PATH = os.path.join(BASE_DIR, "scatter_pib_gasto.png")
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CSV_PATH = os.path.join(BASE_DIR, "data", "datos_tfg_final.csv")
+OUT_PATH = os.path.join(BASE_DIR, "figuras", "scatter_pib_gasto.png")
 
 # ── Carga de datos ─────────────────────────────────────────────────────────────
 df = pd.read_csv(CSV_PATH).dropna(subset=["log_pib_pc", "log_gasto_real"])

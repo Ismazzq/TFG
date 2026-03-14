@@ -11,6 +11,8 @@
 *.bbl
 *.blg
 *.pdf
+*.bcf
+*.run.xml
 
 # Python
 __pycache__/
@@ -30,6 +32,7 @@ __pycache__/
 # Temporary files
 *~
 *.bak
+capitulos/cap10_defensa.tex
 
 # Node/npm (if any)
 node_modules/

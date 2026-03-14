@@ -1,0 +1,1187 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{Besley1999}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=57c77888db637677332c102812686993}{%
+           family={Besley},
+           familyi={B\bibinitperiod},
+           given={Timothy},
+           giveni={T\bibinitperiod}}}%
+        {{hash=fa4493f4566ed8ce19dd8e722f8d57dc}{%
+           family={Hall},
+           familyi={H\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=234c78f13b4e9463f787e1e8130a6950}{%
+           family={Preston},
+           familyi={P\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{69d17d2f5283c7f4aa6c93587eb0fa03}
+      \strng{fullhash}{b60579f98653f97a96befc53d637ac7c}
+      \strng{fullhashraw}{b60579f98653f97a96befc53d637ac7c}
+      \strng{bibnamehash}{b60579f98653f97a96befc53d637ac7c}
+      \strng{authorbibnamehash}{b60579f98653f97a96befc53d637ac7c}
+      \strng{authornamehash}{69d17d2f5283c7f4aa6c93587eb0fa03}
+      \strng{authorfullhash}{b60579f98653f97a96befc53d637ac7c}
+      \strng{authorfullhashraw}{b60579f98653f97a96befc53d637ac7c}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Public Economics}
+      \field{number}{2}
+      \field{title}{The Demand for Private Health Insurance: Do Waiting Lists Matter?}
+      \field{volume}{72}
+      \field{year}{1999}
+      \field{pages}{155\bibrangedash 181}
+      \range{pages}{27}
+      \verb{doi}
+      \verb 10.1016/S0047-2727(98)00108-X
+      \endverb
+    \endentry
+    \entry{Cameron2015}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=dab37900e0b3d1bbd6b945d99fef4b06}{%
+           family={Cameron},
+           familyi={C\bibinitperiod},
+           given={A.\bibnamedelimi Colin},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=1828613c534b16d7b5a650c96a8c2595}{%
+           family={Trivedi},
+           familyi={T\bibinitperiod},
+           given={Pravin\bibnamedelima K.},
+           giveni={P\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{c9ed462534b8f45616884f53043295aa}
+      \strng{fullhash}{c9ed462534b8f45616884f53043295aa}
+      \strng{fullhashraw}{c9ed462534b8f45616884f53043295aa}
+      \strng{bibnamehash}{c9ed462534b8f45616884f53043295aa}
+      \strng{authorbibnamehash}{c9ed462534b8f45616884f53043295aa}
+      \strng{authornamehash}{c9ed462534b8f45616884f53043295aa}
+      \strng{authorfullhash}{c9ed462534b8f45616884f53043295aa}
+      \strng{authorfullhashraw}{c9ed462534b8f45616884f53043295aa}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1}
+      \field{title}{Microeconometrics: Methods and Applications}
+      \field{year}{2005}
+      \verb{doi}
+      \verb 10.1017/CBO9780511811241
+      \endverb
+    \endentry
+    \entry{Grossman1972}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=f1cccf0029ee7eef75d919e21509ac63}{%
+           family={Grossman},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{f1cccf0029ee7eef75d919e21509ac63}
+      \strng{fullhash}{f1cccf0029ee7eef75d919e21509ac63}
+      \strng{fullhashraw}{f1cccf0029ee7eef75d919e21509ac63}
+      \strng{bibnamehash}{f1cccf0029ee7eef75d919e21509ac63}
+      \strng{authorbibnamehash}{f1cccf0029ee7eef75d919e21509ac63}
+      \strng{authornamehash}{f1cccf0029ee7eef75d919e21509ac63}
+      \strng{authorfullhash}{f1cccf0029ee7eef75d919e21509ac63}
+      \strng{authorfullhashraw}{f1cccf0029ee7eef75d919e21509ac63}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Political Economy}
+      \field{number}{2}
+      \field{title}{On the Concept of Health Capital and the Demand for Health}
+      \field{volume}{80}
+      \field{year}{1972}
+      \field{pages}{223\bibrangedash 255}
+      \range{pages}{33}
+      \verb{doi}
+      \verb 10.1086/259880
+      \endverb
+    \endentry
+    \entry{Hausman1978}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=efa8edfd650dfd234af154959e067af8}{%
+           family={Hausman},
+           familyi={H\bibinitperiod},
+           given={Jerry\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{efa8edfd650dfd234af154959e067af8}
+      \strng{fullhash}{efa8edfd650dfd234af154959e067af8}
+      \strng{fullhashraw}{efa8edfd650dfd234af154959e067af8}
+      \strng{bibnamehash}{efa8edfd650dfd234af154959e067af8}
+      \strng{authorbibnamehash}{efa8edfd650dfd234af154959e067af8}
+      \strng{authornamehash}{efa8edfd650dfd234af154959e067af8}
+      \strng{authorfullhash}{efa8edfd650dfd234af154959e067af8}
+      \strng{authorfullhashraw}{efa8edfd650dfd234af154959e067af8}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Econometrica}
+      \field{number}{6}
+      \field{title}{Specification Tests in Econometrics}
+      \field{volume}{46}
+      \field{year}{1978}
+      \field{pages}{1251\bibrangedash 1271}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.2307/1913827
+      \endverb
+    \endentry
+    \entry{Hirschman1970}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=4ac5e72646e56b920bc07c21bf1d611f}{%
+           family={Hirschman},
+           familyi={H\bibinitperiod},
+           given={Albert\bibnamedelima O.},
+           giveni={A\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, MA}%
+      }
+      \list{publisher}{1}{%
+        {Harvard University Press}%
+      }
+      \strng{namehash}{4ac5e72646e56b920bc07c21bf1d611f}
+      \strng{fullhash}{4ac5e72646e56b920bc07c21bf1d611f}
+      \strng{fullhashraw}{4ac5e72646e56b920bc07c21bf1d611f}
+      \strng{bibnamehash}{4ac5e72646e56b920bc07c21bf1d611f}
+      \strng{authorbibnamehash}{4ac5e72646e56b920bc07c21bf1d611f}
+      \strng{authornamehash}{4ac5e72646e56b920bc07c21bf1d611f}
+      \strng{authorfullhash}{4ac5e72646e56b920bc07c21bf1d611f}
+      \strng{authorfullhashraw}{4ac5e72646e56b920bc07c21bf1d611f}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Exit, Voice, and Loyalty: Responses to Decline in Firms, Organizations, and States}
+      \field{year}{1970}
+    \endentry
+    \entry{Im2003}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=63969fd9557868f2b2b1ad9d0313e939}{%
+           family={Im},
+           familyi={I\bibinitperiod},
+           given={Kyung\bibnamedelima So},
+           giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=e084562d58d4fc52d4929a75d0f1b87b}{%
+           family={Pesaran},
+           familyi={P\bibinitperiod},
+           given={M.\bibnamedelimi Hashem},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=f8bdf666c2b0c08aa17261fddcf67c60}{%
+           family={Shin},
+           familyi={S\bibinitperiod},
+           given={Yongcheol},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{78022b2653698ec78feeaeb18ae9f6c1}
+      \strng{fullhash}{c53ee3a4df53af10d688d736fdc5278a}
+      \strng{fullhashraw}{c53ee3a4df53af10d688d736fdc5278a}
+      \strng{bibnamehash}{c53ee3a4df53af10d688d736fdc5278a}
+      \strng{authorbibnamehash}{c53ee3a4df53af10d688d736fdc5278a}
+      \strng{authornamehash}{78022b2653698ec78feeaeb18ae9f6c1}
+      \strng{authorfullhash}{c53ee3a4df53af10d688d736fdc5278a}
+      \strng{authorfullhashraw}{c53ee3a4df53af10d688d736fdc5278a}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Econometrics}
+      \field{number}{1}
+      \field{title}{Testing for Unit Roots in Heterogeneous Panels}
+      \field{volume}{115}
+      \field{year}{2003}
+      \field{pages}{53\bibrangedash 74}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1016/S0304-4076(03)00092-7
+      \endverb
+    \endentry
+    \entry{INE_CRE}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=a303d4390a16a468a0c541d209410697}{%
+           family={{Instituto Nacional de Estadística}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{a303d4390a16a468a0c541d209410697}
+      \strng{fullhash}{a303d4390a16a468a0c541d209410697}
+      \strng{fullhashraw}{a303d4390a16a468a0c541d209410697}
+      \strng{bibnamehash}{a303d4390a16a468a0c541d209410697}
+      \strng{authorbibnamehash}{a303d4390a16a468a0c541d209410697}
+      \strng{authornamehash}{a303d4390a16a468a0c541d209410697}
+      \strng{authorfullhash}{a303d4390a16a468a0c541d209410697}
+      \strng{authorfullhashraw}{a303d4390a16a468a0c541d209410697}
+      \field{extraname}{1}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Banco de datos TEMPUS}
+      \field{note}{Consulta: junio 2024}
+      \field{title}{Contabilidad Regional de España. Base 2015. Series anuales}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736167628&menu=resultados&idp=1254735576581
+      \endverb
+      \verb{url}
+      \verb https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736167628&menu=resultados&idp=1254735576581
+      \endverb
+    \endentry
+    \entry{INE_EPF}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=a303d4390a16a468a0c541d209410697}{%
+           family={{Instituto Nacional de Estadística}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{a303d4390a16a468a0c541d209410697}
+      \strng{fullhash}{a303d4390a16a468a0c541d209410697}
+      \strng{fullhashraw}{a303d4390a16a468a0c541d209410697}
+      \strng{bibnamehash}{a303d4390a16a468a0c541d209410697}
+      \strng{authorbibnamehash}{a303d4390a16a468a0c541d209410697}
+      \strng{authornamehash}{a303d4390a16a468a0c541d209410697}
+      \strng{authorfullhash}{a303d4390a16a468a0c541d209410697}
+      \strng{authorfullhashraw}{a303d4390a16a468a0c541d209410697}
+      \field{extraname}{2}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Banco de datos TEMPUS}
+      \field{note}{Consulta: junio 2024}
+      \field{title}{Encuesta de Presupuestos Familiares. Series anuales por comunidades autónomas, 2016--2024}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736176788&menu=ultiDatos&idp=1254735976608
+      \endverb
+      \verb{url}
+      \verb https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736176788&menu=ultiDatos&idp=1254735976608
+      \endverb
+    \endentry
+    \entry{Kahneman1979}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=d0dcea81f8587e7d56bb5dbe34a39d6c}{%
+           family={Kahneman},
+           familyi={K\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=031d0d5f9391d970f6f089af958f701d}{%
+           family={Tversky},
+           familyi={T\bibinitperiod},
+           given={Amos},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{d3bcf557edbcd57c46dc3a22d1e8ff94}
+      \strng{fullhash}{d3bcf557edbcd57c46dc3a22d1e8ff94}
+      \strng{fullhashraw}{d3bcf557edbcd57c46dc3a22d1e8ff94}
+      \strng{bibnamehash}{d3bcf557edbcd57c46dc3a22d1e8ff94}
+      \strng{authorbibnamehash}{d3bcf557edbcd57c46dc3a22d1e8ff94}
+      \strng{authornamehash}{d3bcf557edbcd57c46dc3a22d1e8ff94}
+      \strng{authorfullhash}{d3bcf557edbcd57c46dc3a22d1e8ff94}
+      \strng{authorfullhashraw}{d3bcf557edbcd57c46dc3a22d1e8ff94}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Econometrica}
+      \field{number}{2}
+      \field{title}{Prospect Theory: An Analysis of Decision under Risk}
+      \field{volume}{47}
+      \field{year}{1979}
+      \field{pages}{263\bibrangedash 291}
+      \range{pages}{29}
+      \verb{doi}
+      \verb 10.2307/1914185
+      \endverb
+    \endentry
+    \entry{Kao1999}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=c591f9256e962f1f7c19d853ce0fc50c}{%
+           family={Kao},
+           familyi={K\bibinitperiod},
+           given={Chihwa},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{c591f9256e962f1f7c19d853ce0fc50c}
+      \strng{fullhash}{c591f9256e962f1f7c19d853ce0fc50c}
+      \strng{fullhashraw}{c591f9256e962f1f7c19d853ce0fc50c}
+      \strng{bibnamehash}{c591f9256e962f1f7c19d853ce0fc50c}
+      \strng{authorbibnamehash}{c591f9256e962f1f7c19d853ce0fc50c}
+      \strng{authornamehash}{c591f9256e962f1f7c19d853ce0fc50c}
+      \strng{authorfullhash}{c591f9256e962f1f7c19d853ce0fc50c}
+      \strng{authorfullhashraw}{c591f9256e962f1f7c19d853ce0fc50c}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Econometrics}
+      \field{number}{1}
+      \field{title}{Spurious Regression and Residual-Based Tests for Cointegration in Panel Data}
+      \field{volume}{90}
+      \field{year}{1999}
+      \field{pages}{1\bibrangedash 44}
+      \range{pages}{44}
+      \verb{doi}
+      \verb 10.1016/S0304-4076(98)00023-2
+      \endverb
+    \endentry
+    \entry{Little1961}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=d08572c62f0d23fe6ab1aa7998419177}{%
+           family={Little},
+           familyi={L\bibinitperiod},
+           given={John\bibnamedelimb D.\bibnamedelimi C.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{d08572c62f0d23fe6ab1aa7998419177}
+      \strng{fullhash}{d08572c62f0d23fe6ab1aa7998419177}
+      \strng{fullhashraw}{d08572c62f0d23fe6ab1aa7998419177}
+      \strng{bibnamehash}{d08572c62f0d23fe6ab1aa7998419177}
+      \strng{authorbibnamehash}{d08572c62f0d23fe6ab1aa7998419177}
+      \strng{authornamehash}{d08572c62f0d23fe6ab1aa7998419177}
+      \strng{authorfullhash}{d08572c62f0d23fe6ab1aa7998419177}
+      \strng{authorfullhashraw}{d08572c62f0d23fe6ab1aa7998419177}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Operations Research}
+      \field{number}{3}
+      \field{title}{A Proof for the Queuing Formula: {$L = \lambda W$}}
+      \field{volume}{9}
+      \field{year}{1961}
+      \field{pages}{383\bibrangedash 387}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1287/opre.9.3.383
+      \endverb
+    \endentry
+    \entry{Maddala1999}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=a98db231b54fe50345b5549f19432f7b}{%
+           family={Maddala},
+           familyi={M\bibinitperiod},
+           given={G.\bibnamedelimi S.},
+           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=155028f51f8cabd41cc233b87ff4359e}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={In-Moo},
+           giveni={I\bibinithyphendelim M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{451dd52e0321ceec514d9d9546189a98}
+      \strng{fullhash}{451dd52e0321ceec514d9d9546189a98}
+      \strng{fullhashraw}{451dd52e0321ceec514d9d9546189a98}
+      \strng{bibnamehash}{451dd52e0321ceec514d9d9546189a98}
+      \strng{authorbibnamehash}{451dd52e0321ceec514d9d9546189a98}
+      \strng{authornamehash}{451dd52e0321ceec514d9d9546189a98}
+      \strng{authorfullhash}{451dd52e0321ceec514d9d9546189a98}
+      \strng{authorfullhashraw}{451dd52e0321ceec514d9d9546189a98}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Unit Roots, Cointegration, and Structural Change}
+      \field{year}{1998}
+      \verb{doi}
+      \verb 10.1017/CBO9780511751974
+      \endverb
+    \endentry
+    \entry{MinSanidad}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=4e5fb97a20b85fef8fc35587efe66226}{%
+           family={{Ministerio de Sanidad}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{4e5fb97a20b85fef8fc35587efe66226}
+      \strng{fullhash}{4e5fb97a20b85fef8fc35587efe66226}
+      \strng{fullhashraw}{4e5fb97a20b85fef8fc35587efe66226}
+      \strng{bibnamehash}{4e5fb97a20b85fef8fc35587efe66226}
+      \strng{authorbibnamehash}{4e5fb97a20b85fef8fc35587efe66226}
+      \strng{authornamehash}{4e5fb97a20b85fef8fc35587efe66226}
+      \strng{authorfullhash}{4e5fb97a20b85fef8fc35587efe66226}
+      \strng{authorfullhashraw}{4e5fb97a20b85fef8fc35587efe66226}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Portal Estadístico del Ministerio de Sanidad}
+      \field{note}{Consulta: junio 2024}
+      \field{title}{Sistema de Información sobre Listas de Espera del {SNS} ({SISLE-SNS}). Datos por comunidades autónomas, 2016--2024}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.sanidad.gob.es/estadEstudios/estadisticas/inforRecopilaciones/listaEspera.htm
+      \endverb
+      \verb{url}
+      \verb https://www.sanidad.gob.es/estadEstudios/estadisticas/inforRecopilaciones/listaEspera.htm
+      \endverb
+    \endentry
+    \entry{Pedroni1999}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=c4318aaed466ca07ae3d186570c9a9d2}{%
+           family={Pedroni},
+           familyi={P\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{c4318aaed466ca07ae3d186570c9a9d2}
+      \strng{fullhash}{c4318aaed466ca07ae3d186570c9a9d2}
+      \strng{fullhashraw}{c4318aaed466ca07ae3d186570c9a9d2}
+      \strng{bibnamehash}{c4318aaed466ca07ae3d186570c9a9d2}
+      \strng{authorbibnamehash}{c4318aaed466ca07ae3d186570c9a9d2}
+      \strng{authornamehash}{c4318aaed466ca07ae3d186570c9a9d2}
+      \strng{authorfullhash}{c4318aaed466ca07ae3d186570c9a9d2}
+      \strng{authorfullhashraw}{c4318aaed466ca07ae3d186570c9a9d2}
+      \field{extraname}{1}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Oxford Bulletin of Economics and Statistics}
+      \field{number}{s1}
+      \field{title}{Critical Values for Cointegration Tests in Heterogeneous Panels with Multiple Regressors}
+      \field{volume}{61}
+      \field{year}{1999}
+      \field{pages}{653\bibrangedash 670}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1111/1468-0084.0610s1653
+      \endverb
+    \endentry
+    \entry{Pedroni2004}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=c4318aaed466ca07ae3d186570c9a9d2}{%
+           family={Pedroni},
+           familyi={P\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{c4318aaed466ca07ae3d186570c9a9d2}
+      \strng{fullhash}{c4318aaed466ca07ae3d186570c9a9d2}
+      \strng{fullhashraw}{c4318aaed466ca07ae3d186570c9a9d2}
+      \strng{bibnamehash}{c4318aaed466ca07ae3d186570c9a9d2}
+      \strng{authorbibnamehash}{c4318aaed466ca07ae3d186570c9a9d2}
+      \strng{authornamehash}{c4318aaed466ca07ae3d186570c9a9d2}
+      \strng{authorfullhash}{c4318aaed466ca07ae3d186570c9a9d2}
+      \strng{authorfullhashraw}{c4318aaed466ca07ae3d186570c9a9d2}
+      \field{extraname}{2}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Econometric Theory}
+      \field{number}{3}
+      \field{title}{Panel Cointegration: Asymptotic and Finite Sample Properties of Pooled Time Series Tests with an Application to the {PPP} Hypothesis}
+      \field{volume}{20}
+      \field{year}{2004}
+      \field{pages}{597\bibrangedash 625}
+      \range{pages}{29}
+      \verb{doi}
+      \verb 10.1017/S0266466604203073
+      \endverb
+    \endentry
+    \entry{Propper2000}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=b231a6fa1f7ad0da4af56973e6b9a433}{%
+           family={Propper},
+           familyi={P\bibinitperiod},
+           given={Carol},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{b231a6fa1f7ad0da4af56973e6b9a433}
+      \strng{fullhash}{b231a6fa1f7ad0da4af56973e6b9a433}
+      \strng{fullhashraw}{b231a6fa1f7ad0da4af56973e6b9a433}
+      \strng{bibnamehash}{b231a6fa1f7ad0da4af56973e6b9a433}
+      \strng{authorbibnamehash}{b231a6fa1f7ad0da4af56973e6b9a433}
+      \strng{authornamehash}{b231a6fa1f7ad0da4af56973e6b9a433}
+      \strng{authorfullhash}{b231a6fa1f7ad0da4af56973e6b9a433}
+      \strng{authorfullhashraw}{b231a6fa1f7ad0da4af56973e6b9a433}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Health Economics}
+      \field{number}{6}
+      \field{title}{The Demand for Private Health Care in the {UK}}
+      \field{volume}{19}
+      \field{year}{2000}
+      \field{pages}{855\bibrangedash 876}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1016/S0167-6296(00)00048-4
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global/global}
+    \entry{Besley1999}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=57c77888db637677332c102812686993}{%
+           family={Besley},
+           familyi={B\bibinitperiod},
+           given={Timothy},
+           giveni={T\bibinitperiod}}}%
+        {{hash=fa4493f4566ed8ce19dd8e722f8d57dc}{%
+           family={Hall},
+           familyi={H\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=234c78f13b4e9463f787e1e8130a6950}{%
+           family={Preston},
+           familyi={P\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{69d17d2f5283c7f4aa6c93587eb0fa03}
+      \strng{fullhash}{b60579f98653f97a96befc53d637ac7c}
+      \strng{fullhashraw}{b60579f98653f97a96befc53d637ac7c}
+      \strng{bibnamehash}{b60579f98653f97a96befc53d637ac7c}
+      \strng{authorbibnamehash}{b60579f98653f97a96befc53d637ac7c}
+      \strng{authornamehash}{69d17d2f5283c7f4aa6c93587eb0fa03}
+      \strng{authorfullhash}{b60579f98653f97a96befc53d637ac7c}
+      \strng{authorfullhashraw}{b60579f98653f97a96befc53d637ac7c}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Public Economics}
+      \field{number}{2}
+      \field{title}{The Demand for Private Health Insurance: Do Waiting Lists Matter?}
+      \field{volume}{72}
+      \field{year}{1999}
+      \field{pages}{155\bibrangedash 181}
+      \range{pages}{27}
+      \verb{doi}
+      \verb 10.1016/S0047-2727(98)00108-X
+      \endverb
+    \endentry
+    \entry{Cameron2015}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=dab37900e0b3d1bbd6b945d99fef4b06}{%
+           family={Cameron},
+           familyi={C\bibinitperiod},
+           given={A.\bibnamedelimi Colin},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=1828613c534b16d7b5a650c96a8c2595}{%
+           family={Trivedi},
+           familyi={T\bibinitperiod},
+           given={Pravin\bibnamedelima K.},
+           giveni={P\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{c9ed462534b8f45616884f53043295aa}
+      \strng{fullhash}{c9ed462534b8f45616884f53043295aa}
+      \strng{fullhashraw}{c9ed462534b8f45616884f53043295aa}
+      \strng{bibnamehash}{c9ed462534b8f45616884f53043295aa}
+      \strng{authorbibnamehash}{c9ed462534b8f45616884f53043295aa}
+      \strng{authornamehash}{c9ed462534b8f45616884f53043295aa}
+      \strng{authorfullhash}{c9ed462534b8f45616884f53043295aa}
+      \strng{authorfullhashraw}{c9ed462534b8f45616884f53043295aa}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1}
+      \field{title}{Microeconometrics: Methods and Applications}
+      \field{year}{2005}
+      \verb{doi}
+      \verb 10.1017/CBO9780511811241
+      \endverb
+    \endentry
+    \entry{Grossman1972}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=f1cccf0029ee7eef75d919e21509ac63}{%
+           family={Grossman},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{f1cccf0029ee7eef75d919e21509ac63}
+      \strng{fullhash}{f1cccf0029ee7eef75d919e21509ac63}
+      \strng{fullhashraw}{f1cccf0029ee7eef75d919e21509ac63}
+      \strng{bibnamehash}{f1cccf0029ee7eef75d919e21509ac63}
+      \strng{authorbibnamehash}{f1cccf0029ee7eef75d919e21509ac63}
+      \strng{authornamehash}{f1cccf0029ee7eef75d919e21509ac63}
+      \strng{authorfullhash}{f1cccf0029ee7eef75d919e21509ac63}
+      \strng{authorfullhashraw}{f1cccf0029ee7eef75d919e21509ac63}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Political Economy}
+      \field{number}{2}
+      \field{title}{On the Concept of Health Capital and the Demand for Health}
+      \field{volume}{80}
+      \field{year}{1972}
+      \field{pages}{223\bibrangedash 255}
+      \range{pages}{33}
+      \verb{doi}
+      \verb 10.1086/259880
+      \endverb
+    \endentry
+    \entry{Hausman1978}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=efa8edfd650dfd234af154959e067af8}{%
+           family={Hausman},
+           familyi={H\bibinitperiod},
+           given={Jerry\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{efa8edfd650dfd234af154959e067af8}
+      \strng{fullhash}{efa8edfd650dfd234af154959e067af8}
+      \strng{fullhashraw}{efa8edfd650dfd234af154959e067af8}
+      \strng{bibnamehash}{efa8edfd650dfd234af154959e067af8}
+      \strng{authorbibnamehash}{efa8edfd650dfd234af154959e067af8}
+      \strng{authornamehash}{efa8edfd650dfd234af154959e067af8}
+      \strng{authorfullhash}{efa8edfd650dfd234af154959e067af8}
+      \strng{authorfullhashraw}{efa8edfd650dfd234af154959e067af8}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Econometrica}
+      \field{number}{6}
+      \field{title}{Specification Tests in Econometrics}
+      \field{volume}{46}
+      \field{year}{1978}
+      \field{pages}{1251\bibrangedash 1271}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.2307/1913827
+      \endverb
+    \endentry
+    \entry{Hirschman1970}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=4ac5e72646e56b920bc07c21bf1d611f}{%
+           family={Hirschman},
+           familyi={H\bibinitperiod},
+           given={Albert\bibnamedelima O.},
+           giveni={A\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, MA}%
+      }
+      \list{publisher}{1}{%
+        {Harvard University Press}%
+      }
+      \strng{namehash}{4ac5e72646e56b920bc07c21bf1d611f}
+      \strng{fullhash}{4ac5e72646e56b920bc07c21bf1d611f}
+      \strng{fullhashraw}{4ac5e72646e56b920bc07c21bf1d611f}
+      \strng{bibnamehash}{4ac5e72646e56b920bc07c21bf1d611f}
+      \strng{authorbibnamehash}{4ac5e72646e56b920bc07c21bf1d611f}
+      \strng{authornamehash}{4ac5e72646e56b920bc07c21bf1d611f}
+      \strng{authorfullhash}{4ac5e72646e56b920bc07c21bf1d611f}
+      \strng{authorfullhashraw}{4ac5e72646e56b920bc07c21bf1d611f}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Exit, Voice, and Loyalty: Responses to Decline in Firms, Organizations, and States}
+      \field{year}{1970}
+    \endentry
+    \entry{Im2003}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=63969fd9557868f2b2b1ad9d0313e939}{%
+           family={Im},
+           familyi={I\bibinitperiod},
+           given={Kyung\bibnamedelima So},
+           giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=e084562d58d4fc52d4929a75d0f1b87b}{%
+           family={Pesaran},
+           familyi={P\bibinitperiod},
+           given={M.\bibnamedelimi Hashem},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=f8bdf666c2b0c08aa17261fddcf67c60}{%
+           family={Shin},
+           familyi={S\bibinitperiod},
+           given={Yongcheol},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{78022b2653698ec78feeaeb18ae9f6c1}
+      \strng{fullhash}{c53ee3a4df53af10d688d736fdc5278a}
+      \strng{fullhashraw}{c53ee3a4df53af10d688d736fdc5278a}
+      \strng{bibnamehash}{c53ee3a4df53af10d688d736fdc5278a}
+      \strng{authorbibnamehash}{c53ee3a4df53af10d688d736fdc5278a}
+      \strng{authornamehash}{78022b2653698ec78feeaeb18ae9f6c1}
+      \strng{authorfullhash}{c53ee3a4df53af10d688d736fdc5278a}
+      \strng{authorfullhashraw}{c53ee3a4df53af10d688d736fdc5278a}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Econometrics}
+      \field{number}{1}
+      \field{title}{Testing for Unit Roots in Heterogeneous Panels}
+      \field{volume}{115}
+      \field{year}{2003}
+      \field{pages}{53\bibrangedash 74}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1016/S0304-4076(03)00092-7
+      \endverb
+    \endentry
+    \entry{INE_CRE}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=a303d4390a16a468a0c541d209410697}{%
+           family={{Instituto Nacional de Estadística}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{a303d4390a16a468a0c541d209410697}
+      \strng{fullhash}{a303d4390a16a468a0c541d209410697}
+      \strng{fullhashraw}{a303d4390a16a468a0c541d209410697}
+      \strng{bibnamehash}{a303d4390a16a468a0c541d209410697}
+      \strng{authorbibnamehash}{a303d4390a16a468a0c541d209410697}
+      \strng{authornamehash}{a303d4390a16a468a0c541d209410697}
+      \strng{authorfullhash}{a303d4390a16a468a0c541d209410697}
+      \strng{authorfullhashraw}{a303d4390a16a468a0c541d209410697}
+      \field{extraname}{1}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Banco de datos TEMPUS}
+      \field{note}{Consulta: junio 2024}
+      \field{title}{Contabilidad Regional de España. Base 2015. Series anuales}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736167628&menu=resultados&idp=1254735576581
+      \endverb
+      \verb{url}
+      \verb https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736167628&menu=resultados&idp=1254735576581
+      \endverb
+    \endentry
+    \entry{INE_EPF}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=a303d4390a16a468a0c541d209410697}{%
+           family={{Instituto Nacional de Estadística}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{a303d4390a16a468a0c541d209410697}
+      \strng{fullhash}{a303d4390a16a468a0c541d209410697}
+      \strng{fullhashraw}{a303d4390a16a468a0c541d209410697}
+      \strng{bibnamehash}{a303d4390a16a468a0c541d209410697}
+      \strng{authorbibnamehash}{a303d4390a16a468a0c541d209410697}
+      \strng{authornamehash}{a303d4390a16a468a0c541d209410697}
+      \strng{authorfullhash}{a303d4390a16a468a0c541d209410697}
+      \strng{authorfullhashraw}{a303d4390a16a468a0c541d209410697}
+      \field{extraname}{2}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Banco de datos TEMPUS}
+      \field{note}{Consulta: junio 2024}
+      \field{title}{Encuesta de Presupuestos Familiares. Series anuales por comunidades autónomas, 2016--2024}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736176788&menu=ultiDatos&idp=1254735976608
+      \endverb
+      \verb{url}
+      \verb https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736176788&menu=ultiDatos&idp=1254735976608
+      \endverb
+    \endentry
+    \entry{Kahneman1979}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=d0dcea81f8587e7d56bb5dbe34a39d6c}{%
+           family={Kahneman},
+           familyi={K\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=031d0d5f9391d970f6f089af958f701d}{%
+           family={Tversky},
+           familyi={T\bibinitperiod},
+           given={Amos},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{d3bcf557edbcd57c46dc3a22d1e8ff94}
+      \strng{fullhash}{d3bcf557edbcd57c46dc3a22d1e8ff94}
+      \strng{fullhashraw}{d3bcf557edbcd57c46dc3a22d1e8ff94}
+      \strng{bibnamehash}{d3bcf557edbcd57c46dc3a22d1e8ff94}
+      \strng{authorbibnamehash}{d3bcf557edbcd57c46dc3a22d1e8ff94}
+      \strng{authornamehash}{d3bcf557edbcd57c46dc3a22d1e8ff94}
+      \strng{authorfullhash}{d3bcf557edbcd57c46dc3a22d1e8ff94}
+      \strng{authorfullhashraw}{d3bcf557edbcd57c46dc3a22d1e8ff94}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Econometrica}
+      \field{number}{2}
+      \field{title}{Prospect Theory: An Analysis of Decision under Risk}
+      \field{volume}{47}
+      \field{year}{1979}
+      \field{pages}{263\bibrangedash 291}
+      \range{pages}{29}
+      \verb{doi}
+      \verb 10.2307/1914185
+      \endverb
+    \endentry
+    \entry{Kao1999}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=c591f9256e962f1f7c19d853ce0fc50c}{%
+           family={Kao},
+           familyi={K\bibinitperiod},
+           given={Chihwa},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{c591f9256e962f1f7c19d853ce0fc50c}
+      \strng{fullhash}{c591f9256e962f1f7c19d853ce0fc50c}
+      \strng{fullhashraw}{c591f9256e962f1f7c19d853ce0fc50c}
+      \strng{bibnamehash}{c591f9256e962f1f7c19d853ce0fc50c}
+      \strng{authorbibnamehash}{c591f9256e962f1f7c19d853ce0fc50c}
+      \strng{authornamehash}{c591f9256e962f1f7c19d853ce0fc50c}
+      \strng{authorfullhash}{c591f9256e962f1f7c19d853ce0fc50c}
+      \strng{authorfullhashraw}{c591f9256e962f1f7c19d853ce0fc50c}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Econometrics}
+      \field{number}{1}
+      \field{title}{Spurious Regression and Residual-Based Tests for Cointegration in Panel Data}
+      \field{volume}{90}
+      \field{year}{1999}
+      \field{pages}{1\bibrangedash 44}
+      \range{pages}{44}
+      \verb{doi}
+      \verb 10.1016/S0304-4076(98)00023-2
+      \endverb
+    \endentry
+    \entry{Little1961}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=d08572c62f0d23fe6ab1aa7998419177}{%
+           family={Little},
+           familyi={L\bibinitperiod},
+           given={John\bibnamedelimb D.\bibnamedelimi C.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{d08572c62f0d23fe6ab1aa7998419177}
+      \strng{fullhash}{d08572c62f0d23fe6ab1aa7998419177}
+      \strng{fullhashraw}{d08572c62f0d23fe6ab1aa7998419177}
+      \strng{bibnamehash}{d08572c62f0d23fe6ab1aa7998419177}
+      \strng{authorbibnamehash}{d08572c62f0d23fe6ab1aa7998419177}
+      \strng{authornamehash}{d08572c62f0d23fe6ab1aa7998419177}
+      \strng{authorfullhash}{d08572c62f0d23fe6ab1aa7998419177}
+      \strng{authorfullhashraw}{d08572c62f0d23fe6ab1aa7998419177}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Operations Research}
+      \field{number}{3}
+      \field{title}{A Proof for the Queuing Formula: {$L = \lambda W$}}
+      \field{volume}{9}
+      \field{year}{1961}
+      \field{pages}{383\bibrangedash 387}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1287/opre.9.3.383
+      \endverb
+    \endentry
+    \entry{Maddala1999}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=a98db231b54fe50345b5549f19432f7b}{%
+           family={Maddala},
+           familyi={M\bibinitperiod},
+           given={G.\bibnamedelimi S.},
+           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=155028f51f8cabd41cc233b87ff4359e}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={In-Moo},
+           giveni={I\bibinithyphendelim M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{451dd52e0321ceec514d9d9546189a98}
+      \strng{fullhash}{451dd52e0321ceec514d9d9546189a98}
+      \strng{fullhashraw}{451dd52e0321ceec514d9d9546189a98}
+      \strng{bibnamehash}{451dd52e0321ceec514d9d9546189a98}
+      \strng{authorbibnamehash}{451dd52e0321ceec514d9d9546189a98}
+      \strng{authornamehash}{451dd52e0321ceec514d9d9546189a98}
+      \strng{authorfullhash}{451dd52e0321ceec514d9d9546189a98}
+      \strng{authorfullhashraw}{451dd52e0321ceec514d9d9546189a98}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Unit Roots, Cointegration, and Structural Change}
+      \field{year}{1998}
+      \verb{doi}
+      \verb 10.1017/CBO9780511751974
+      \endverb
+    \endentry
+    \entry{MinSanidad}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=4e5fb97a20b85fef8fc35587efe66226}{%
+           family={{Ministerio de Sanidad}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{4e5fb97a20b85fef8fc35587efe66226}
+      \strng{fullhash}{4e5fb97a20b85fef8fc35587efe66226}
+      \strng{fullhashraw}{4e5fb97a20b85fef8fc35587efe66226}
+      \strng{bibnamehash}{4e5fb97a20b85fef8fc35587efe66226}
+      \strng{authorbibnamehash}{4e5fb97a20b85fef8fc35587efe66226}
+      \strng{authornamehash}{4e5fb97a20b85fef8fc35587efe66226}
+      \strng{authorfullhash}{4e5fb97a20b85fef8fc35587efe66226}
+      \strng{authorfullhashraw}{4e5fb97a20b85fef8fc35587efe66226}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Portal Estadístico del Ministerio de Sanidad}
+      \field{note}{Consulta: junio 2024}
+      \field{title}{Sistema de Información sobre Listas de Espera del {SNS} ({SISLE-SNS}). Datos por comunidades autónomas, 2016--2024}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.sanidad.gob.es/estadEstudios/estadisticas/inforRecopilaciones/listaEspera.htm
+      \endverb
+      \verb{url}
+      \verb https://www.sanidad.gob.es/estadEstudios/estadisticas/inforRecopilaciones/listaEspera.htm
+      \endverb
+    \endentry
+    \entry{Pedroni1999}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=c4318aaed466ca07ae3d186570c9a9d2}{%
+           family={Pedroni},
+           familyi={P\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{c4318aaed466ca07ae3d186570c9a9d2}
+      \strng{fullhash}{c4318aaed466ca07ae3d186570c9a9d2}
+      \strng{fullhashraw}{c4318aaed466ca07ae3d186570c9a9d2}
+      \strng{bibnamehash}{c4318aaed466ca07ae3d186570c9a9d2}
+      \strng{authorbibnamehash}{c4318aaed466ca07ae3d186570c9a9d2}
+      \strng{authornamehash}{c4318aaed466ca07ae3d186570c9a9d2}
+      \strng{authorfullhash}{c4318aaed466ca07ae3d186570c9a9d2}
+      \strng{authorfullhashraw}{c4318aaed466ca07ae3d186570c9a9d2}
+      \field{extraname}{1}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Oxford Bulletin of Economics and Statistics}
+      \field{number}{s1}
+      \field{title}{Critical Values for Cointegration Tests in Heterogeneous Panels with Multiple Regressors}
+      \field{volume}{61}
+      \field{year}{1999}
+      \field{pages}{653\bibrangedash 670}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1111/1468-0084.0610s1653
+      \endverb
+    \endentry
+    \entry{Pedroni2004}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=c4318aaed466ca07ae3d186570c9a9d2}{%
+           family={Pedroni},
+           familyi={P\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{c4318aaed466ca07ae3d186570c9a9d2}
+      \strng{fullhash}{c4318aaed466ca07ae3d186570c9a9d2}
+      \strng{fullhashraw}{c4318aaed466ca07ae3d186570c9a9d2}
+      \strng{bibnamehash}{c4318aaed466ca07ae3d186570c9a9d2}
+      \strng{authorbibnamehash}{c4318aaed466ca07ae3d186570c9a9d2}
+      \strng{authornamehash}{c4318aaed466ca07ae3d186570c9a9d2}
+      \strng{authorfullhash}{c4318aaed466ca07ae3d186570c9a9d2}
+      \strng{authorfullhashraw}{c4318aaed466ca07ae3d186570c9a9d2}
+      \field{extraname}{2}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Econometric Theory}
+      \field{number}{3}
+      \field{title}{Panel Cointegration: Asymptotic and Finite Sample Properties of Pooled Time Series Tests with an Application to the {PPP} Hypothesis}
+      \field{volume}{20}
+      \field{year}{2004}
+      \field{pages}{597\bibrangedash 625}
+      \range{pages}{29}
+      \verb{doi}
+      \verb 10.1017/S0266466604203073
+      \endverb
+    \endentry
+    \entry{Propper2000}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=b231a6fa1f7ad0da4af56973e6b9a433}{%
+           family={Propper},
+           familyi={P\bibinitperiod},
+           given={Carol},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{b231a6fa1f7ad0da4af56973e6b9a433}
+      \strng{fullhash}{b231a6fa1f7ad0da4af56973e6b9a433}
+      \strng{fullhashraw}{b231a6fa1f7ad0da4af56973e6b9a433}
+      \strng{bibnamehash}{b231a6fa1f7ad0da4af56973e6b9a433}
+      \strng{authorbibnamehash}{b231a6fa1f7ad0da4af56973e6b9a433}
+      \strng{authornamehash}{b231a6fa1f7ad0da4af56973e6b9a433}
+      \strng{authorfullhash}{b231a6fa1f7ad0da4af56973e6b9a433}
+      \strng{authorfullhashraw}{b231a6fa1f7ad0da4af56973e6b9a433}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Health Economics}
+      \field{number}{6}
+      \field{title}{The Demand for Private Health Care in the {UK}}
+      \field{volume}{19}
+      \field{year}{2000}
+      \field{pages}{855\bibrangedash 876}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1016/S0167-6296(00)00048-4
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

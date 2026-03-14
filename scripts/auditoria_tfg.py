@@ -11,9 +11,9 @@ import numpy as np
 import warnings
 warnings.filterwarnings("ignore")
 
-BASE_DIR    = Path(__file__).resolve().parent
-RUTA_CSV    = BASE_DIR / "panel_datos_final_TFG_v3.csv"
-RUTA_SALIDA = BASE_DIR / "datos_tfg_final.csv"
+BASE_DIR    = Path(__file__).resolve().parent.parent
+RUTA_CSV    = BASE_DIR / "data" / "panel_datos_final_TFG_v3.csv"
+RUTA_SALIDA = BASE_DIR / "data" / "datos_tfg_final.csv"
 
 # ── Separador visual ─────────────────────────────────────────────────────────
 def sep(titulo=""):
